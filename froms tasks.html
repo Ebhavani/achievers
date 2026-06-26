@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Forms Demo</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form{
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        h2{
+            text-align: center;
+        }
+        label{
+            display: inline-block;
+            width: 150px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Application Form -->
+    <form>
+        <h2>Application Form</h2>
+
+        <label>First Name:</label>
+        <input type="text"><br><br>
+
+        <label>Last Name:</label>
+        <input type="text"><br><br>
+
+        <label>Date of Birth:</label>
+        <input type="date">
+
+        <label>Age:</label>
+        <input type="number"><br><br>
+
+        <label>Gender:</label>
+        <select>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select><br><br>
+
+        <label>Email Address:</label>
+        <input type="email"><br><br>
+
+        <label>Position:</label>
+        <input type="radio" name="pos"> Junior Developer
+        <input type="radio" name="pos"> Mid-level Developer
+        <input type="radio" name="pos"> Senior Developer
+        <br><br>
+
+        <label>Languages:</label>
+        <input type="checkbox"> Java
+        <input type="checkbox"> JavaScript
+        <input type="checkbox"> Python
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password"><br><br>
+
+        <label>Confirm Password:</label>
+        <input type="password"><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <!-- Login Form -->
+    <form>
+        <h2>Login Form</h2>
+
+        <label>Username:</label>
+        <input type="text" placeholder="Enter Username"><br><br>
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter Password"><br><br>
+
+        <input type="submit" value="Login">
+
+        <p>Not a member? <a href="#">Register Here!</a></p>
+    </form>
+
+    <!-- Registration Form -->
+    <form>
+        <h2>Registration Form</h2>
+
+        <label>First Name:</label>
+        <input type="text"><br><br>
+
+        <label>Last Name:</label>
+        <input type="text"><br><br>
+
+        <label>Email:</label>
+        <input type="email"><br><br>
+
+        <label>Password:</label>
+        <input type="password"><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number"><br><br>
+
+        <label>Preferences:</label>
+        <input type="checkbox"> Acrylic Painting
+        <input type="checkbox"> Oil Painting
+        <input type="checkbox"> Water Color Painting
+        <br><br>
+
+        <label>Occupation:</label>
+        <select>
+            <option>Student</option>
+            <option>Teacher</option>
+            <option>Employee</option>
+        </select><br><br>
+
+        <label>Bio:</label>
+        <textarea rows="5" cols="30"></textarea>
+        <br><br>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- All Input Types Demo -->
+    <form>
+        <h2>All Form Types Demo</h2>
+
+        Text: <input type="text"><br><br>
+        Password: <input type="password"><br><br>
+        Email: <input type="email"><br><br>
+        URL: <input type="url"><br><br>
+        Telephone: <input type="tel"><br><br>
+        Search: <input type="search"><br><br>
+        Number: <input type="number"><br><br>
+        Range: <input type="range"><br><br>
+        Date: <input type="date"><br><br>
+        Time: <input type="time"><br><br>
+        Week: <input type="week"><br><br>
+        Month: <input type="month"><br><br>
+        File: <input type="file"><br><br>
+        Color: <input type="color"><br><br>
+
+        <input type="checkbox"> I agree<br><br>
+
+        Gender:
+        <input type="radio" name="g"> Male
+        <input type="radio" name="g"> Female
+        <br><br>
+
+        Country:
+        <select>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+        </select>
+        <br><br>
+
+        <textarea rows="4" cols="30" placeholder="Write something..."></textarea>
+        <br><br>
+
+        <input type="submit" value="Submit Form">
+        <input type="reset" value="Reset Form">
+    </form>
+
+</body>
+</html>
