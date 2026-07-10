@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-dark: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --card-border: rgba(255, 255, 255, 0.05);
+    --card-alt-bg: rgba(15, 23, 42, 0.8);
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #64748b;
+    --primary-color: #ec4899;
+    --primary-glow: linear-gradient(135deg, #ec4899 0%, #d946ef 100%);
+    --lead-color: #8b5cf6;
+    --lead-glow: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    padding-bottom: 4rem;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.back-btn {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    color: var(--text-primary);
+    background: var(--card-border);
+    transform: translateX(-4px);
+}
+
+/* Req 1: Company name unique style */
+#company-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #f8fafc;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.1rem;
+}
+
+#company-name span {
+    color: var(--primary-color);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Employee Grid */
+.employee-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Req 2: All employee cards should have a common design */
+.employee-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.employee-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+/* Req 10: Highlight alternate employee cards */
+/* This will apply to cards that are NOT overridden by general sibling combinator rules */
+.employee-card:nth-of-type(even) {
+    background: var(--card-alt-bg);
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Avatar Placeholder */
+.employee-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border: 1px solid var(--card-border);
+}
+
+/* Team Lead styling (Base node for sibling combinators) */
+.team-lead {
+    border: 2px solid var(--lead-color) !important;
+    background: rgba(139, 92, 246, 0.05) !important;
+}
+
+.team-lead .employee-avatar {
+    background: var(--lead-glow);
+}
+
+.team-lead::before {
+    content: "Team Lead";
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: var(--lead-color);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* Req 6: All employees appearing after the Team Lead should have a light background */
+.team-lead ~ .employee-card {
+    background: #f8fafc !important;
+    border-color: #e2e8f0;
+    color: #0f172a;
+}
+
+/* Make sure text elements in light background cards look dark */
+.team-lead ~ .employee-card .employee-name {
+    color: #0f172a;
+}
+
+.team-lead ~ .employee-card .employee-role {
+    color: #475569;
+}
+
+.team-lead ~ .employee-card .employee-avatar {
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+}
+
+/* Req 5: The employee immediately after the Team Lead should be highlighted */
+/* This combines the light background of general sibling with adjacent sibling highlights */
+.team-lead + .employee-card {
+    border: 2px solid #ef4444 !important;
+    background: #fff5f5 !important; /* Slightly tinted red-white */
+    box-shadow: 0 10px 20px rgba(239, 68, 68, 0.15);
+}
+
+.team-lead + .employee-card::after {
+    content: "⚡ Under Lead Supervision";
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #ef4444;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* Req 7: The first employee should be marked as "Star Performer" */
+.employee-card:first-of-type::before {
+    content: "🏆 Star Performer";
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #f59e0b;
+    color: #0f172a;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* Req 8: The last employee should be marked as "Support Team" */
+.employee-card:last-of-type::after {
+    content: "🔧 Support Team";
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #10b981;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.employee-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Req 3: Employee names should stand out from other content */
+.employee-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+/* Req 9: Add an employee icon before every employee name */
+.employee-name::before {
+    content: "\1F464"; /* Unicode employee avatar */
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.employee-role {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.team-lead .employee-role {
+    color: var(--lead-color);
+}
+
+/* Req 4: Employee details inside cards should have a different color */
+.employee-details {
+    font-size: 0.9rem;
+    color: #94a3b8; /* Cool blue gray for details */
+    line-height: 1.4;
+}
+
+.team-lead ~ .employee-card .employee-details {
+    color: #64748b; /* Darker muted text for readability on light backgrounds */
+}
+
+/* Requirements Sidebar panel */
+.requirements-panel {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    height: fit-content;
+}
+
+.requirements-panel h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.requirements-panel ul {
+    list-style: none;
+}
+
+.requirements-panel li {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+.requirements-panel li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}

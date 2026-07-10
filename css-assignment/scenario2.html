@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenario 2: E-Commerce Product Page</title>
+    <link rel="stylesheet" href="css/scenario2.css">
+</head>
+<body>
+    <div class="header-container">
+        <a href="index.html" class="back-btn">&larr; Dashboard</a>
+        <h1 id="store-logo">Aero<span>Gear</span></h1>
+        <div style="width: 100px;"></div> <!-- Spacer for balancing flexbox -->
+    </div>
+
+    <main class="main-content">
+        <section class="products-container">
+            <div class="products-grid">
+                <!-- Card 1: First Child gets "Hot Deal" Indicator -->
+                <div class="product-card">
+                    <div>
+                        <div class="product-img">🎧</div>
+                        <h3 class="product-name">Quantum ANC Headphones</h3>
+                        <p class="product-desc">Next-generation audio drivers with hybrid active noise cancelling. Experience unmatched sound clarity.</p>
+                        
+                        <div class="standard-price-container">
+                            <span class="standard-price">$199.99</span>
+                            <span class="old-price">$249.99</span>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <!-- Card 2: Alternate background, discount badge on selected product -->
+                <div class="product-card">
+                    <div>
+                        <div class="product-img">⌚</div>
+                        <h3 class="product-name discounted">Chronos Smartwatch v2</h3>
+                        <p class="product-desc">Advanced biometrics tracker featuring a stunning curved AMOLED panel and 7-day battery life.</p>
+                        
+                        <div class="standard-price-container">
+                            <span class="standard-price">$159.99</span>
+                            <span class="old-price">$199.99</span>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <!-- Card 3: Offer pricing structure -->
+                <div class="product-card">
+                    <div>
+                        <div class="product-img">🔋</div>
+                        <h3 class="product-name">MagSafe Power Vault</h3>
+                        <p class="product-desc">Fast charging 10,000mAh magnetic power bank with integrated metal stand and LED status indicator.</p>
+                        
+                        <div class="offer-section">
+                            <span class="offer-title">Flash Sale</span>
+                            <span class="special-price">$39.99</span>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <!-- Card 4: Last Child gets "Limited Stock" Indicator, Alternate Background -->
+                <div class="product-card">
+                    <div>
+                        <div class="product-img">🖱️</div>
+                        <h3 class="product-name">Apex Silent Click Mouse</h3>
+                        <p class="product-desc">Ultra-ergonomic wireless optical mouse with adjustable DPI and silent feedback mechanical switches.</p>
+                        
+                        <div class="standard-price-container">
+                            <span class="standard-price">$49.99</span>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar illustrating requirements -->
+        <aside class="requirements-panel">
+            <h3>Verified Selectors</h3>
+            <ul>
+                <li><strong>Req 1: Logo style:</strong> <code>#store-logo</code> (ID)</li>
+                <li><strong>Req 2: Card design:</strong> <code>.product-card</code> (Class)</li>
+                <li><strong>Req 3: Names prominent:</strong> <code>.product-name</code> (Class)</li>
+                <li><strong>Req 4: Offer price style:</strong> <code>.offer-section .special-price</code></li>
+                <li><strong>Req 5: First product "Hot Deal":</strong> <code>.product-card:first-of-type::before</code></li>
+                <li><strong>Req 6: Last product "Limited Stock":</strong> <code>.product-card:last-of-type::after</code></li>
+                <li><strong>Req 7: Alternate card bg:</strong> <code>.product-card:nth-of-type(even)</code></li>
+                <li><strong>Req 8: Cart icon before name:</strong> <code>.product-name::before</code> (Unicode <code>\1F6D2</code>)</li>
+                <li><strong>Req 9: Discount badge after:</strong> <code>.discounted::after</code> (Pseudo-element badge)</li>
+                <li><strong>Req 10: Add to Cart hover:</strong> <code>.add-to-cart-btn:hover</code></li>
+            </ul>
+        </aside>
+    </main>
+</body>
+</html>

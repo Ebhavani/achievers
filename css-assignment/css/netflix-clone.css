@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-black: #141414;
+    --card-bg: #1f1f1f;
+    --card-border: rgba(229, 9, 20, 0.1);
+    --card-alt-bg: #181818;
+    --netflix-red: #e50914;
+    --text-light: #f5f5f7;
+    --text-muted: #808080;
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-light);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    padding-bottom: 4rem;
+    overflow-x: hidden;
+}
+
+/* Netflix Style Navbar */
+header {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Logo styling */
+.netflix-logo {
+    color: var(--netflix-red);
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Req 1: Style navigation links */
+.nav-link {
+    text-decoration: none;
+    color: #e5e5e5;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+
+.nav-link:hover {
+    color: #b3b3b3;
+}
+
+/* Req 2: Highlight the active menu item */
+.nav-link.active {
+    color: #fff;
+    font-weight: 700;
+    border-bottom: 2px solid var(--netflix-red);
+    padding-bottom: 0.2rem;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid var(--netflix-red);
+    border-radius: 4px;
+    background: rgba(229, 9, 20, 0.1);
+    transition: var(--transition-smooth);
+}
+
+.back-btn:hover {
+    background: var(--netflix-red);
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+}
+
+/* Main Showcase Content */
+.main-content {
+    max-width: 1400px;
+    margin: 2rem auto 0;
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: 3.5fr 1fr;
+    gap: 3rem;
+}
+
+@media (max-width: 1000px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Row titles */
+.row-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.2px;
+}
+
+/* Movie grid layout */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Req 3: Movie cards should have a common design */
+.movie-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+    padding: 1.25rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Req 9: Movie cards should react on hover */
+.movie-card:hover {
+    transform: scale(1.05) translateY(-5px);
+    border-color: var(--netflix-red);
+    box-shadow: 0 10px 25px rgba(229, 9, 20, 0.25), 0 0 10px rgba(229, 9, 20, 0.15);
+    z-index: 10;
+}
+
+/* Req 6: Alternate movie cards should have different backgrounds */
+.movie-card:nth-of-type(even) {
+    background: var(--card-alt-bg);
+}
+
+.movie-card:nth-of-type(even):hover {
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1), 0 0 10px rgba(229, 9, 20, 0.15);
+}
+
+/* Req 4: The first movie should display "Top Pick" */
+.movie-card:first-of-type::before {
+    content: "Top Pick 🏆";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--netflix-red);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    z-index: 10;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Req 5: The last movie should display "Recently Added" */
+.movie-card:last-of-type::after {
+    content: "New Episode 🔔";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #0073e6;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    z-index: 10;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Poster Art Gradient Box */
+.movie-poster {
+    height: 260px;
+    border-radius: 6px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.08) 100%);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+/* Req 7: Add a play icon before movie titles */
+.movie-title::before {
+    content: "\25B6"; /* Unicode Play Icon (pointing triangle) */
+    margin-right: 0.5rem;
+    color: var(--netflix-red);
+    display: inline-block;
+    font-size: 0.95rem;
+    filter: drop-shadow(0 0 5px rgba(229, 9, 20, 0.5));
+}
+
+.movie-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.4rem;
+}
+
+/* Req 8: Add a rating badge after trending movies */
+.trending::after {
+    content: "★ 98% Match";
+    display: inline-block;
+    background: rgba(70, 211, 105, 0.15);
+    color: #46d369;
+    border: 1px solid rgba(70, 211, 105, 0.25);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Req 10: Movie descriptions should have styled first letters */
+.movie-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    min-height: 2.8rem;
+}
+
+.movie-desc::first-letter {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--netflix-red);
+    margin-right: 0.1rem;
+}
+
+.movie-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 0.75rem;
+}
+
+.maturity-rating {
+    border: 1px solid var(--text-muted);
+    padding: 0.05rem 0.3rem;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+/* Requirements Sidebar panel */
+.requirements-panel {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    height: fit-content;
+}
+
+.requirements-panel h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--netflix-red);
+    font-weight: 600;
+}
+
+.requirements-panel ul {
+    list-style: none;
+}
+
+.requirements-panel li {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+.requirements-panel li::before {
+    content: "•";
+    color: var(--netflix-red);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}

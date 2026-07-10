@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-dark: #0b0f19;
+    --card-bg: rgba(22, 30, 49, 0.7);
+    --card-border: rgba(99, 102, 241, 0.08);
+    --card-alt-bg: rgba(15, 20, 35, 0.85);
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --primary-color: #6366f1;
+    --primary-glow: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    --accent-green: #10b981;
+    --accent-red: #ef4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    padding-bottom: 4rem;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.back-btn {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    color: var(--text-primary);
+    background: var(--card-border);
+    transform: translateX(-4px);
+}
+
+/* Req 1: Assignment page title should have a unique style */
+#portal-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #f8fafc;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 0.75rem;
+}
+
+#portal-title span {
+    color: var(--primary-color);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Assignment List */
+.assignment-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Req 2: All assignment cards should have a common design */
+.assignment-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.assignment-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+/* Req 6: Alternate assignment cards should have different backgrounds */
+.assignment-card:nth-of-type(even) {
+    background: var(--card-alt-bg);
+    border-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Req 4: The first assignment should display "New Assignment" */
+.assignment-card:first-of-type {
+    border-left: 4px solid var(--primary-color);
+}
+
+.assignment-card:first-of-type::before {
+    content: "New Assignment";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Req 5: The last assignment should display "Deadline Soon" */
+.assignment-card:last-of-type {
+    border-left: 4px solid var(--accent-red);
+}
+
+.assignment-card:last-of-type::before {
+    content: "Deadline Soon";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: var(--accent-red);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.assignment-info {
+    max-width: 75%;
+}
+
+/* Req 8: Add a document icon before every assignment title */
+.assignment-title::before {
+    content: "\1F4C4"; /* Unicode Document Page */
+    margin-right: 0.6rem;
+    display: inline-block;
+}
+
+.assignment-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Req 9: Add a submission status badge after completed assignments */
+.status-completed::after {
+    content: "Completed";
+    display: inline-block;
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    margin-left: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Req 3: Assignment descriptions should have a different color */
+.assignment-desc {
+    font-size: 0.9rem;
+    color: #38bdf8; /* Sky blue description text color */
+    line-height: 1.5;
+}
+
+.assignment-card:nth-of-type(even) .assignment-desc {
+    color: #7dd3fc; /* Alternate sky blue color for better rhythm */
+}
+
+/* Req 10: The first letter of assignment descriptions should be larger */
+.assignment-desc::first-letter {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    float: left;
+    margin-right: 0.25rem;
+    line-height: 1;
+}
+
+.assignment-card:last-of-type .assignment-desc::first-letter {
+    color: var(--accent-red);
+}
+
+.assignment-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.due-date {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+/* Req 7: Submission button should react on hover */
+.submit-btn {
+    padding: 0.65rem 1.25rem;
+    border-radius: 8px;
+    border: none;
+    background: var(--primary-glow);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    filter: brightness(1.1);
+}
+
+.submit-btn:disabled {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--card-border);
+    color: var(--text-muted);
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Requirements Sidebar panel */
+.requirements-panel {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    height: fit-content;
+}
+
+.requirements-panel h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.requirements-panel ul {
+    list-style: none;
+}
+
+.requirements-panel li {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+.requirements-panel li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}

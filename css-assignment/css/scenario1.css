@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-dark: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --card-border: rgba(255, 255, 255, 0.05);
+    --card-alt-bg: rgba(15, 23, 42, 0.8);
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #64748b;
+    --primary-color: #6366f1;
+    --primary-glow: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    --accent-color: #10b981;
+    --top-performer-border: #f59e0b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    padding-bottom: 4rem;
+}
+
+/* Header & Back Button styles */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.back-btn {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    color: var(--text-primary);
+    background: var(--card-border);
+    transform: translateX(-4px);
+}
+
+/* Unique Website Title */
+#website-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Student Cards Grid */
+.students-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Common Student Card Design */
+.student-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Alternate Student Card Background */
+.student-card:nth-of-type(even) {
+    background: var(--card-alt-bg);
+    border-color: rgba(99, 102, 241, 0.1);
+}
+
+/* First Student Card Highlighted as Top Performer */
+.student-card:first-of-type {
+    border: 2px solid var(--top-performer-border);
+    background: rgba(245, 158, 11, 0.03);
+}
+
+/* Top Performer Badge using Pseudo-element */
+.student-card:first-of-type::before {
+    content: "★ Top Performer";
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: var(--top-performer-border);
+    color: #0f172a;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+}
+
+/* Avatar styling */
+.student-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 1.25rem;
+    background: var(--primary-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.student-card:nth-of-type(even) .student-avatar {
+    background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+}
+
+.student-card:first-of-type .student-avatar {
+    background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+}
+
+/* Different Student Names styling */
+.student-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.3px;
+}
+
+/* First card student name special gold glow */
+.student-card:first-of-type .student-name {
+    color: #fbbf24;
+}
+
+/* First letter of student description is larger */
+.student-desc::first-letter {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    float: left;
+    margin-right: 0.3rem;
+    line-height: 1;
+}
+
+.student-card:first-of-type .student-desc::first-letter {
+    color: var(--top-performer-border);
+}
+
+.student-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    min-height: 3rem;
+}
+
+.course-info {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Graduation cap before every course name */
+.course-name::before {
+    content: "\1F393"; /* Unicode Graduation Cap */
+    margin-right: 0.5rem;
+    display: inline-block;
+}
+
+.course-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+/* Course descriptions have a different color */
+.course-desc {
+    font-size: 0.85rem;
+    color: #818cf8; /* Indigo accent color for course descriptions */
+    line-height: 1.4;
+}
+
+/* Completed Course element gets a certified badge after it */
+.completed::after {
+    content: "Certified";
+    display: inline-block;
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Enroll Button hover reaction */
+.enroll-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--text-primary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.enroll-btn:hover {
+    background: var(--primary-glow);
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+    transform: translateY(-2px);
+}
+
+/* Sidebar with Requirements Info */
+.requirements-panel {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    height: fit-content;
+}
+
+.requirements-panel h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.requirements-panel ul {
+    list-style: none;
+}
+
+.requirements-panel li {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+.requirements-panel li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}

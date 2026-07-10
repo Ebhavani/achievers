@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenario 3: Company Employee Portal</title>
+    <link rel="stylesheet" href="css/scenario3.css">
+</head>
+<body>
+    <div class="header-container">
+        <a href="index.html" class="back-btn">&larr; Dashboard</a>
+        <h1 id="company-name">Synergy<span>Corp</span></h1>
+        <div style="width: 100px;"></div> <!-- Spacer for balancing flexbox -->
+    </div>
+
+    <main class="main-content">
+        <section class="employee-container">
+            <div class="employee-list">
+                <!-- Employee 1: First of Type gets "Star Performer" -->
+                <div class="employee-card">
+                    <div class="employee-avatar">👨‍💻</div>
+                    <div class="employee-info">
+                        <h3 class="employee-name">TEJA</h3>
+                        <span class="employee-role">Principal Architect</span>
+                        <p class="employee-details">TEJA designed the multi-region cloud deployment and ensures system uptime remains at 99.99%.</p>
+                    </div>
+                </div>
+
+                <!-- Employee 2: Alternate styling default -->
+                <div class="employee-card">
+                    <div class="employee-avatar">👩‍💼</div>
+                    <div class="employee-info">
+                        <h3 class="employee-name">Bhavani Erathi</h3>
+                        <span class="employee-role">UX Researcher</span>
+                        <p class="employee-details">Bhavani leads user studies and interfaces design protocols to align application designs with customer behaviors.</p>
+                    </div>
+                </div>
+
+                <!-- Employee 3: Team Lead (Base node for sibling selectors) -->
+                <div class="employee-card team-lead">
+                    <div class="employee-avatar">🧔</div>
+                    <div class="employee-info">
+                        <h3 class="employee-name">Hari</h3>
+                        <span class="employee-role">Core Engine Lead</span>
+                        <p class="employee-details">Hari manages development workflows, sprint plannings, and architectures for core telemetry pipelines.</p>
+                    </div>
+                </div>
+
+                <!-- Employee 4: Adjacent Sibling (Highlighted + Light Background) -->
+                <div class="employee-card">
+                    <div class="employee-avatar">👩‍💻</div>
+                    <div class="employee-info">
+                        <h3 class="employee-name">Sai</h3>
+                        <span class="employee-role">Senior Devops</span>
+                        <p class="employee-details">Sai handles CI/CD pipelines, container orchestration, and immediate system configurations under Hari's leadership.</p>
+                    </div>
+                </div>
+
+                <!-- Employee 5: General Sibling (Light Background) -->
+                <div class="employee-card">
+                    <div class="employee-avatar">🧑‍💻</div>
+                    <div class="employee-info">
+                        <h3 class="employee-name">Simran</h3>
+                        <span class="employee-role">Backend Engineer</span>
+                        <p class="employee-details">Simran maintains database schemas, server infrastructure, and write-heavy API endpoints for the analytical dashboards.</p>
+                    </div>
+                </div>
+
+                <!-- Employee 6: Last Sibling (Light Background + Support Team Badge) -->
+                <div class="employee-card">
+                    <div class="employee-avatar">🛠️</div>
+                    <div class="employee-info">
+                        <h3 class="employee-name">venky</h3>
+                        <span class="employee-role">Infrastructure Support</span>
+                        <p class="employee-details">venky handles daily server diagnostics, system backups, and developer desktop setups across the department.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar illustrating requirements -->
+        <aside class="requirements-panel">
+            <h3>Verified Selectors</h3>
+            */<ul>
+                <li><strong>: Company style:</strong> <code>#company-name</code> (ID)</li>
+                <li><strong>: Card design:</strong> <code>.employee-card</code> (Class)</li>
+                <li><strong>: Names stand out:</strong> <code>.employee-name</code></li>
+                <li><strong>: Details color:</strong> <code>.employee-details</code> (Descendant)</li>
+                <li><strong>: Sibling after Lead:</strong> <code>.team-lead + .employee-card</code> (Adjacent)</li>
+                <li><strong: Sibling list after Lead:</strong> <code>.team-lead ~ .employee-card</code> (General)</li>
+                <li><strong>: First card "Star Performer":</strong> <code>.employee-card:first-of-type::before</code></li>
+                <li><strong>: Last card "Support Team":</strong> <code>.employee-card:last-of-type::after</code></li>
+                <li><strong>: Icon before name:</strong> <code>.employee-name::before</code> (Unicode <code>\1F464</code>)</li>
+                <li><strong>: Alternate card:</strong> <code>.employee-card:nth-of-type(even)</code></li>*/
+            </ul>*/
+        </aside>
+    </main>
+</body>
+</html>

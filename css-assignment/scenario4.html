@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenario 4: Restaurant Website</title>
+    <link rel="stylesheet" href="css/scenario4.css">
+</head>
+<body>
+    <div class="header-container">
+        <a href="index.html" class="back-btn">&larr; Dashboard</a>
+        <h1 id="restaurant-title">L'Ambroisie<span>Paris</span></h1>
+        <div style="width: 100px;"></div> <!-- Spacer for balancing flexbox -->
+    </div>
+
+    <main class="main-content">
+        <section class="menu-container">
+            <div class="menu-grid">
+                <!-- Card 1: First Child gets "Most Ordered" badge -->
+                <div class="menu-item">
+                    <div>
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Filet Mignon</h3>
+                            <span class="menu-item-price">$48.00</span>
+                        </div>
+                        <p class="menu-desc">Prime grass-fed beef tenderloin pan-seared with rosemary butter, roasted garlic heads, and a rich red wine reduction reduction sauce.</p>
+                    </div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+
+                <!-- Card 2: Alternate bg, chef special badge on selected item -->
+                <div class="menu-item">
+                    <div>
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title chef-special">Truffle Tagliatelle</h3>
+                            <span class="menu-item-price">$38.00</span>
+                        </div>
+                        <p class="menu-desc">Hand-rolled egg pasta tossed in a creamy parmigiano-reggiano sauce, finished with shaved black summer truffles and micro greens.</p>
+                    </div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+
+                <!-- Card 3: Standard card -->
+                <div class="menu-item">
+                    <div>
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Pan-Seared Sea Bass</h3>
+                            <span class="menu-item-price">$42.00</span>
+                        </div>
+                        <p class="menu-desc">Chilean sea bass fillet with crispy skin, served over a bed of saffron risotto and charred asparagus, drizzled with citrus beurre blanc.</p>
+                    </div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+
+                <!-- Card 4: Last Child gets "Chef Recommendation" badge, Alternate Background -->
+                <div class="menu-item">
+                    <div>
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Crème Brûlée</h3>
+                            <span class="menu-item-price">$16.00</span>
+                        </div>
+                        <p class="menu-desc">Rich Tahitian vanilla bean custard baked with a brittle caramelized sugar crust, garnished with fresh raspberries and fresh mint leaf.</p>
+                    </div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar illustrating requirements -->
+        <aside class="requirements-panel">
+            <h3>Verified Selectors</h3>
+            <ul>
+                <li><strong>Req 1: Title style:</strong> <code>#restaurant-title</code> (ID)</li>
+                <li><strong>Req 2: Item design:</strong> <code>.menu-item</code> (Class)</li>
+                <li><strong>Req 3: Desc color different:</strong> <code>.menu-desc</code> (Class)</li>
+                <li><strong>Req 4: First item "Most Ordered":</strong> <code>.menu-item:first-of-type::before</code></li>
+                <li><strong>Req 5: Last item "Chef Recommendation":</strong> <code>.menu-item:last-of-type::before</code></li>
+                <li><strong>Req 6: Alternate item bg:</strong> <code>.menu-item:nth-of-type(even)</code></li>
+                <li><strong>Req 7: Plate icon before:</strong> <code>.menu-item-title::before</code> (Unicode <code>\1F37D</code>)</li>
+                <li><strong>Req 8: Chef Special badge:</strong> <code>.chef-special::after</code> (Pseudo-element badge)</li>
+                <li><strong>Req 9: Buttons hover:</strong> <code>.order-btn:hover</code></li>
+                <li><strong>Req 10: First letter larger:</strong> <code>.menu-desc::first-letter</code></li>
+            </ul>
+        </aside>
+    </main>
+</body>
+</html>

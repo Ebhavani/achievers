@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-dark: #090d16;
+    --card-bg: rgba(22, 28, 45, 0.7);
+    --card-border: rgba(255, 255, 255, 0.05);
+    --card-alt-bg: rgba(13, 17, 28, 0.8);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --primary-color: #3b82f6;
+    --primary-glow: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    --accent-red: #ef4444;
+    --accent-orange: #f97316;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    padding-bottom: 4rem;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.back-btn {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    color: var(--text-primary);
+    background: var(--card-border);
+    transform: translateX(-4px);
+}
+
+/* Req 1: Website logo should have a unique style */
+#store-logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #f8fafc;
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+    border: 2px solid var(--primary-color);
+    padding: 0.25rem 1rem;
+    border-radius: 8px;
+}
+
+#store-logo span {
+    color: var(--primary-color);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Req 2: All product cards should have a common design */
+.product-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 0 15px rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Req 7: Alternate product cards should have different backgrounds */
+.product-card:nth-of-type(even) {
+    background: var(--card-alt-bg);
+    border-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Req 5: The first product should display a "Hot Deal" indicator */
+.product-card:first-of-type::before {
+    content: "🔥 Hot Deal";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--accent-red);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.75rem;
+    border-radius: 30px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.4);
+    text-transform: uppercase;
+}
+
+/* Req 6: The last product should display a "Limited Stock" indicator */
+.product-card:last-of-type::after {
+    content: "⏳ Limited Stock";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--accent-orange);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.75rem;
+    border-radius: 30px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(249, 115, 22, 0.4);
+    text-transform: uppercase;
+}
+
+/* Product image container placeholder with gradient */
+.product-img {
+    height: 180px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 100%);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+/* Req 3: Product names should be displayed prominently */
+.product-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+/* Req 8: Add a shopping cart icon before every product name */
+.product-name::before {
+    content: "\1F6D2"; /* Shopping Cart Unicode */
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    display: inline-block;
+    filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.5));
+}
+
+.product-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    min-height: 2.5rem;
+}
+
+/* Req 4: Prices inside offer sections should have a special appearance */
+.offer-section {
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px dashed rgba(16, 185, 129, 0.2);
+    border-radius: 10px;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offer-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #34d399;
+    text-transform: uppercase;
+}
+
+.offer-section .special-price {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #34d399;
+    text-shadow: 0 0 10px rgba(52, 211, 153, 0.2);
+}
+
+.standard-price-container {
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.standard-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.old-price {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-decoration: line-through;
+}
+
+/* Req 9: Add a discount badge after selected products */
+.discounted::after {
+    content: "Save 20%";
+    display: inline-block;
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Req 10: The Add to Cart button should react on hover */
+.add-to-cart-btn {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 12px;
+    border: none;
+    background: var(--primary-glow);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
+}
+
+.add-to-cart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+    filter: brightness(1.1);
+}
+
+/* Requirements Sidebar panel */
+.requirements-panel {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    height: fit-content;
+}
+
+.requirements-panel h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.requirements-panel ul {
+    list-style: none;
+}
+
+.requirements-panel li {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+.requirements-panel li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}

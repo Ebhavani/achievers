@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Home Page Clone</title>
+    <link rel="stylesheet" href="css/netflix-clone.css">
+</head>
+<body>
+    <header>
+        <div class="logo-nav">
+            <div class="netflix-logo">Netflix</div>
+            <nav>
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">TV Shows</a>
+                <a href="#" class="nav-link">Movies</a>
+                <a href="#" class="nav-link">New & Popular</a>
+                <a href="#" class="nav-link">My List</a>
+            </nav>
+        </div>
+        <a href="index.html" class="back-btn">Exit Clone</a>
+    </header>
+
+    <main class="main-content">
+        <section class="movies-container">
+            <h2 class="row-title">Trending Now</h2>
+            <div class="movie-grid">
+                <!-- Card 1: First Child gets "Top Pick" badge, rating badge (trending) -->
+                <div class="movie-card">
+                    <div>
+                        <div class="movie-poster" style="font-size: 2.5rem;">🌌</div>
+                        <h3 class="movie-title trending">Interstellar</h3>
+                        <p class="movie-desc">Mankind was born on Earth, but it was never meant to die here. Join a team of explorers on an epic space voyage through a newly discovered wormhole.</p>
+                    </div>
+                    <div class="movie-meta">
+                        <span>2014</span>
+                        <span class="maturity-rating">PG-13</span>
+                        <span>2h 49m</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Alternate card background -->
+                <div class="movie-card">
+                    <div>
+                        <div class="movie-poster" style="font-size: 2.5rem;">🕶️</div>
+                        <h3 class="movie-title">The Matrix Resurrections</h3>
+                        <p class="movie-desc">Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a physical construct, Thomas must choose.</p>
+                    </div>
+                    <div class="movie-meta">
+                        <span>2021</span>
+                        <span class="maturity-rating">R</span>
+                        <span>2h 28m</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Normal card background -->
+                <div class="movie-card">
+                    <div>
+                        <div class="movie-poster" style="font-size: 2.5rem;">🧠</div>
+                        <h3 class="movie-title">Inception</h3>
+                        <p class="movie-desc">A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.</p>
+                    </div>
+                    <div class="movie-meta">
+                        <span>2010</span>
+                        <span class="maturity-rating">PG-13</span>
+                        <span>2h 28m</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Last Child gets "New Episode" badge, Alternate Background -->
+                <div class="movie-card">
+                    <div>
+                        <div class="movie-poster" style="font-size: 2.5rem;">🐙</div>
+                        <h3 class="movie-title">Squid Game</h3>
+                        <p class="movie-desc">Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits with deadly high stakes.</p>
+                    </div>
+                    <div class="movie-meta">
+                        <span>Season 2</span>
+                        <span class="maturity-rating">TV-MA</span>
+                        <span>9 Episodes</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar illustrating requirements -->
+        <aside class="requirements-panel">
+            <h3>Verified Selectors</h3>
+            <ul>
+                <li><strong>Req 1: Navigation links:</strong> <code>.nav-link</code> (Class)</li>
+                <li><strong>Req 2: Highlight active item:</strong> <code>.nav-link.active</code> (Class combo)</li>
+                <li><strong>Req 3: Card design:</strong> <code>.movie-card</code> (Class)</li>
+                <li><strong>Req 4: First movie "Top Pick":</strong> <code>.movie-card:first-of-type::before</code></li>
+                <li><strong>Req 5: Last movie "Recently Added":</strong> <code>.movie-card:last-of-type::after</code></li>
+                <li><strong>Req 6: Alternate movie bg:</strong> <code>.movie-card:nth-of-type(even)</code></li>
+                <li><strong>Req 7: Play icon before:</strong> <code>.movie-title::before</code> (Unicode <code>\25B6</code>)</li>
+                <li><strong>Req 8: Rating badge after:</strong> <code>.trending::after</code></li>
+                <li><strong>Req 9: Hover zoom reaction:</strong> <code>.movie-card:hover</code></li>
+                <li><strong>Req 10: First letter styled:</strong> <code>.movie-desc::first-letter</code></li>
+            </ul>
+        </aside>
+    </main>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Card Templates - HTML & CSS Replica</title>
+  <!-- Google Fonts for typography -->
+  /*<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles2.css">*/
+</head>
+<body>
+
+  <!-- PAGE 1 CONTAINER -->
+  <main class="page-container page-one">
+    <!-- Header Title "Box Model" -->
+    <header class="page-header">
+      <div class="header-logo-wrapper">
+        <!-- 3D Box Model coordinate icon -->
+        <svg class="box-model-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+          <line x1="12" y1="12" x2="12" y2="4" />
+          <line x1="12" y1="12" x2="5" y2="16" />
+          <line x1="12" y1="12" x2="19" y2="16" />
+          <rect x="10.5" y="2.5" width="3" height="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="3.5" y="14.5" width="3" height="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="17.5" y="14.5" width="3" height="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <h1>Box Model</h1>
+      </div>
+    </header>
+
+    <!-- Card 1: Horizontal ID Card (John Doe) -->
+    <section class="card-section horizontal-card-section">
+      <div class="horizontal-card">
+        <div class="card-header-bar">
+          IDENTIFICATION CARD
+        </div>
+        <div class="card-body">
+          <!-- Left side: Photo placeholder (No external image) -->
+          <div class="photo-container">
+            <div class="photo-placeholder" aria-label="Portrait of John Doe">
+              <svg viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer background -->
+                <rect width="100" height="120" fill="#E2E8F0"/>
+                <!-- Head -->
+                <circle cx="50" cy="45" r="22" fill="#94A3B8"/>
+                <!-- Shoulders -->
+                <path d="M10 110 C10 82 28 68 50 68 C72 68 90 82 90 110 Z" fill="#94A3B8"/>
+              </svg>
+            </div>
+          </div>
+          <!-- Right side: Details -->
+          <div class="details-container">
+            <table class="details-table">
+              <tr>
+                <td class="label">Name:</td>
+                <td class="value highlight">Bhavani</td>
+              </tr>
+              <tr>
+                <td class="label">Title:</td>
+                <td class="value highlight">Director</td>
+              </tr>
+              <tr>
+                <td class="label">ID No:</td>
+                <td class="value highlight">123456</td>
+              </tr>
+              <tr>
+                <td class="label">Issued:</td>
+                <td class="value">01/01/2020</td>
+              </tr>
+              <tr>
+                <td class="label">Expires:</td>
+                <td class="value">31/12/2020</td>
+              </tr>
+            </table>
+            <div class="company-name">COMPANY</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card 2 Section: Bottom Template Preview (John Smith Template Mockup) -->
+    <section class="template-preview-section">
+      <div class="mockup-background">
+        <!-- Mockup Capsule at the top -->
+        <div class="mockup-top-capsule"></div>
+          
+        
+        <div class="vertical-cards-preview-container">
+          <!-- FRONT SIDE (John Smith) -->
+          <div class="preview-vertical-card front-preview">
+            <!-- V-neck geometric header SVG -->
+            <div class="card-geometric-header">
+              <svg class="header-geometry" viewBox="0 0 210 140" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="wingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1e3c72" />
+                    <stop offset="100%" stop-color="#2a5298" />
+                  </linearGradient>
+                  <linearGradient id="foldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#3a7bd5" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#3a7bd5" stop-opacity="0.2"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,0 L70,0 L105,110 L0,110 Z" fill="url(#wingGrad)" />
+                <path d="M210,0 L140,0 L105,110 L210,110 Z" fill="url(#wingGrad)" />
+                <path d="M0,0 L50,0 L105,110 L0,80 Z" fill="url(#foldGrad)" />
+                <path d="M210,0 L160,0 L105,110 L210,80 Z" fill="url(#foldGrad)" />
+                <path d="M0,80 L105,110 L0,110 Z" fill="#1b355a" opacity="0.4" />
+                <path d="M210,80 L105,110 L210,110 Z" fill="#1b355a" opacity="0.4" />
+              </svg>
+            </div>
+            
+            <!-- Thick-border avatar container overlapping -->
+            <div class="avatar-ring-container thick-border">
+              <div class="avatar-ring">
+                <div class="photo-placeholder" aria-label="Avatar Placeholder">
+                  <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="50" fill="#E2E8F0"/>
+                    <circle cx="50" cy="40" r="18" fill="#94A3B8"/>
+                    <path d="M18 85C18 67 32 58 50 58C68 58 82 67 82 85" fill="#94A3B8"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="preview-card-body">
+              <div class="holder-name">JOHN SMITH</div>
+              <div class="holder-title">creative manager</div>
+              <div class="divider-line"></div>
+              
+              <!-- Company Logo Section below divider -->
+              <div class="company-logo-section">
+                <svg class="swirl-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="50" fill="#1b355a"/>
+                  <path d="M25,50 C25,30 40,20 60,25 C45,30 35,42 35,55 C35,68 45,75 55,75 C35,75 25,65 25,50 Z" fill="white"/>
+                  <path d="M45,50 C45,35 55,28 68,32 C58,35 52,44 52,53 C52,62 58,68 65,68 C52,68 45,60 45,50 Z" fill="#4a90e2"/>
+                </svg>
+                <div class="logo-text">
+                  <span class="company-title">COMPANY</span>
+                  <span class="company-tag">TAGLINE HERE</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Corner accent shapes -->
+            <div class="card-geometric-footer">
+              <svg class="footer-geometry" viewBox="0 0 210 50" preserveAspectRatio="none">
+                <path d="M0,50 L50,50 L0,0 Z" fill="url(#wingGrad)" />
+                <path d="M0,50 L35,50 L0,15 Z" fill="url(#foldGrad)" />
+                <path d="M210,50 L160,50 L210,0 Z" fill="url(#wingGrad)" />
+                <path d="M210,50 L175,50 L210,15 Z" fill="url(#foldGrad)" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- BACK SIDE (John Smith) -->
+          <div class="preview-vertical-card back-preview">
+            <!-- V-neck geometric header SVG -->
+            <div class="card-geometric-header">
+              <svg class="header-geometry" viewBox="0 0 210 140" preserveAspectRatio="none">
+                <path d="M0,0 L70,0 L105,110 L0,110 Z" fill="url(#wingGrad)" />
+                <path d="M210,0 L140,0 L105,110 L210,110 Z" fill="url(#wingGrad)" />
+                <path d="M0,0 L50,0 L105,110 L0,80 Z" fill="url(#foldGrad)" />
+                <path d="M210,0 L160,0 L105,110 L210,80 Z" fill="url(#foldGrad)" />
+                <path d="M0,80 L105,110 L0,110 Z" fill="#1b355a" opacity="0.4" />
+                <path d="M210,80 L105,110 L210,110 Z" fill="#1b355a" opacity="0.4" />
+              </svg>
+            </div>
+
+            <div class="preview-back-body">
+              <!-- Company Logo Section inside Body -->
+              <div class="company-logo-section">
+                <svg class="swirl-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="50" fill="#1b355a"/>
+                  <path d="M25,50 C25,30 40,20 60,25 C45,30 35,42 35,55 C35,68 45,75 55,75 C35,75 25,65 25,50 Z" fill="white"/>
+                  <path d="M45,50 C45,35 55,28 68,32 C58,35 52,44 52,53 C52,62 58,68 65,68 C52,68 45,60 45,50 Z" fill="#4a90e2"/>
+                </svg>
+                <div class="logo-text">
+                  <span class="company-title">COMPANY</span>
+                  <span class="company-tag">TAGLINE HERE</span>
+                </div>
+              </div>
+
+              <!-- Details Grid -->
+              <ul class="preview-details-list">
+                <li><span class="lbl">ID NO</span> <span class="val">: 098276656</span></li>
+                <li><span class="lbl">Blood</span> <span class="val">: A-</span></li>
+                <li><span class="lbl">Phone</span> <span class="val">: 000-123-456-786</span></li>
+                <li><span class="lbl">E-mail</span> <span class="val">: urmail@gmail.com</span></li>
+              </ul>
+              
+              <!-- Vector Barcode with blue border box -->
+              <div class="barcode-container bordered">
+                <div class="barcode">
+                  <div class="bar thin"></div>
+                  <div class="bar thick"></div>
+                  <div class="bar medium"></div>
+                  <div class="bar thin"></div>
+                  <div class="bar extra-thick"></div>
+                  <div class="bar thin"></div>
+                  <div class="bar medium"></div>
+                  <div class="bar thick"></div>
+                  <div class="bar thin"></div>
+                  <div class="bar extra-thick"></div>
+                  <div class="bar medium"></div>
+                  <div class="bar thin"></div>
+                  <div class="bar thick"></div>
+                  <div class="bar thin"></div>
+                  <div class="bar medium"></div>
+                  <div class="bar thin"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PAGE 2 CONTAINER -->
+  <main class="page-container page-two">
+    <div class="page-two-mockup-wrapper">
+      
+      <!-- Top banner layout with background accents -->
+      <div class="page-two-content-bg">
+        <div class="blue-corner-top"></div>
+        <div class="blue-corner-bottom"></div>
+        
+        <!-- Header features column layout -->
+        <header class="mockup-features-header">
+          <div class="feature-col">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 22 12"/>
+            </svg>
+            <div class="feature-text">
+              <h3>WELL ORGANISED</h3>
+              <p>LAYER AND GRAPHIC</p>
+            </div>
+          </div>
+          <div class="feature-col">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+              <path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4z" />
+            </svg>
+            <div class="feature-text">
+              <h3>FULLY</h3>
+              <p>EDITABLE</p>
+            </div>
+          </div>
+          <div class="feature-col">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+            </svg>
+            <div class="feature-text">
+              <h3>EPS FILE</h3>
+              <p>IN VECTOR</p>
+            </div>
+          </div>
+        </header>
+
+        <!-- Vertical Cards Display Area -->
+        <section class="main-vertical-cards-container">
+          
+          <!-- FRONT SIDE CARD (NAME HERE) -->
+          <div class="vector-vertical-card front-card">
+            <!-- Blue curved header section -->
+            <div class="card-top-blue">
+              <div class="logo-group light-text">
+                <svg class="preview-logo-icon white-stroke" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M8 6L3 12l5 6" />
+                  <path d="M16 6l5 5.5-5 5.5" />
+                  <rect x="10.5" y="10.5" width="3" height="3" transform="rotate(45 12 12)" />
+                </svg>
+                <div class="logo-text">
+                  <div class="company-title">COMPANY NAME</div>
+                  <div class="company-tag">Your Tagline Here</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Circular avatar overlap -->
+            <div class="avatar-ring-container">
+              <div class="avatar-ring">
+                <div class="photo-placeholder" aria-label="Portrait of Graphic Designer">
+                  <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="50" fill="#E2E8F0"/>
+                    <circle cx="50" cy="40" r="18" fill="#94A3B8"/>
+                    <path d="M18 85C18 67 32 58 50 58C68 58 82 67 82 85" fill="#94A3B8"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Body Content -->
+            <div class="vector-card-body">
+              <h2 class="person-name">NAME HERE</h2>
+              <h3 class="person-role">GRAPHIC DESIGNER</h3>
+              
+              <table class="vector-details-table">
+                <tr>
+                  <td class="lbl">ID NO</td>
+                  <td class="sep">:</td>
+                  <td class="val">00 1234 56789</td>
+                </tr>
+                <tr>
+                  <td class="lbl">D.O.B</td>
+                  <td class="sep">:</td>
+                  <td class="val">07-09-2001</td>
+                </tr>
+                <tr>
+                  <td class="lbl">B.GROUP</td>
+                  <td class="sep">:</td>
+                  <td class="val">A+</td>
+                </tr>
+                <tr>
+                  <td class="lbl">PHONE</td>
+                  <td class="sep">:</td>
+                  <td class="val">+00 1234 5678</td>
+                </tr>
+                <tr>
+                  <td class="lbl">E-MAIL</td>
+                  <td class="sep">:</td>
+                  <td class="val">email@example.com</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!-- BACK SIDE CARD (TERMS & CONDITIONS) -->
+          <div class="vector-vertical-card back-card">
+            <!-- White top header with logo and barcode -->
+            <div class="card-top-white">
+              <div class="logo-group dark-text">
+                <svg class="preview-logo-icon blue-stroke" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M8 6L3 12l5 6" />
+                  <path d="M16 6l5 5.5-5 5.5" />
+                  <rect x="10.5" y="10.5" width="3" height="3" transform="rotate(45 12 12)" />
+                </svg>
+                <div class="logo-text">
+                  <div class="company-title">COMPANY NAME</div>
+                  <div class="company-tag">Your Tagline Here</div>
+                </div>
+              </div>
+              
+              <!-- Centered Barcode -->
+              <div class="barcode-container">
+                <div class="barcode">
+                  <div class="bar thin"></div>
+                  <div class="bar thick"></div>
+                  <div class="bar medium"></div>
+                  <div class="bar thin"></div>
+                  <div class="bar extra-thick"></div>
+                  <div class="bar thin"></div>
+                  <div class="bar medium"></div>
+                  <div class="bar thick"></div>
+                  <div class="bar thin"></div>
+                  <div class="bar extra-thick"></div>
+                  <div class="bar medium"></div>
+                  <div class="bar thin"></div>
+                  <div class="bar thick"></div>
+                  <div class="bar thin"></div>
+                  <div class="bar medium"></div>
+                  <div class="bar thin"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blue Bottom Content Section -->
+            <div class="card-bottom-blue">
+              <div class="terms-title">Terms & Conditions:</div>
+              <ul class="terms-list">
+                <li>
+                  <span class="bullet-dot"></span>
+                  <span class="bullet-text">It is a long established fact that a reader will be distracted by</span>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <span class="bullet-text">It is a long established fact that a reader will be distracted by</span>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <span class="bullet-text">It is a long established fact that a reader will be distracted by</span>
+                </li>
+              </ul>
+              
+              <!-- Signature Area -->
+              <div class="signature-block">
+                <div class="signature-handwriting">Signature</div>
+                <div class="signature-line">Your Signature</div>
+              </div>
+            </div>
+          </div>
+          
+        </section>
+
+        <!-- "IMAGE NOT INCLUDED" Pill Capsule -->
+
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenario 5: LMS Assignment Portal</title>
+    <link rel="stylesheet" href="css/scenario5.css">
+</head>
+<body>
+    <div class="header-container">
+        <a href="index.html" class="back-btn">&larr; Dashboard</a>
+        <h1 id="portal-title">Edu<span>LMS</span></h1>
+        <div style="width: 100px;"></div> <!-- Spacer for balancing flexbox -->
+    </div>
+
+    <main class="main-content">
+        <section class="assignments-container">
+            <div class="assignment-list">
+                <!-- Card 1: First of Type gets "New Assignment" -->
+                <div class="assignment-card">
+                    <div class="assignment-info">
+                        <h3 class="assignment-title">Responsive Portfolio Implementation</h3>
+                        <p class="assignment-desc">Design and implement a personal coding portfolio page. Must be fully responsive, work seamlessly on mobile, tablet, and desktop viewports, and pass syntax checks.</p>
+                    </div>
+                    <div class="assignment-actions">
+                        <span class="due-date">Due: In 5 days</span>
+                        <button class="submit-btn">Submit Assignment</button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Alternate Card, Completed Badge -->
+                <div class="assignment-card">
+                    <div class="assignment-info">
+                        <h3 class="assignment-title status-completed">Form Validation & DOM Scripting</h3>
+                        <p class="assignment-desc">Build a registration form containing custom validations for passwords, usernames, and telephone parameters. Handle dynamic field generation.</p>
+                    </div>
+                    <div class="assignment-actions">
+                        <span class="due-date">Submitted</span>
+                        <button class="submit-btn" disabled>Re-submit</button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Standard Card, Completed Badge -->
+                <div class="assignment-card">
+                    <div class="assignment-info">
+                        <h3 class="assignment-title status-completed">CSS Flexbox Layout Models</h3>
+                        <p class="assignment-desc">Construct a complex media grid and dashboard sidebars using CSS flexbox rules. Achieve layout fluidity without pixel values.</p>
+                    </div>
+                    <div class="assignment-actions">
+                        <span class="due-date">Submitted</span>
+                        <button class="submit-btn" disabled>Re-submit</button>
+                    </div>
+                </div>
+
+                <!-- Card 4: Last of Type gets "Deadline Soon", Alternate Card -->
+                <div class="assignment-card">
+                    <div class="assignment-info">
+                        <h3 class="assignment-title">Kubernetes Cluster Architecture</h3>
+                        <p class="assignment-desc">Configure a three-node cluster with auto-healing, load balancers, and persistent volume mount structures. Test scale transitions under load.</p>
+                    </div>
+                    <div class="assignment-actions">
+                        <span class="due-date" style="color: var(--accent-red); font-weight: bold;">Due: Today (4 hours left)</span>
+                        <button class="submit-btn">Submit Assignment</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar illustrating requirements -->
+        <aside class="requirements-panel">
+            <h3>Verified Selectors</h3>
+            <ul>
+                <li><strong>Req 1: Title style:</strong> <code>#portal-title</code> (ID)</li>
+                <li><strong>Req 2: Card design:</strong> <code>.assignment-card</code> (Class)</li>
+                <li><strong>Req 3: Desc color:</strong> <code>.assignment-desc</code> (Class)</li>
+                <li><strong>Req 4: First "New Assignment":</strong> <code>.assignment-card:first-of-type::before</code></li>
+                <li><strong>Req 5: Last "Deadline Soon":</strong> <code>.assignment-card:last-of-type::before</code></li>
+                <li><strong>Req 6: Alternate bg:</strong> <code>.assignment-card:nth-of-type(even)</code></li>
+                <li><strong>Req 7: Submit button hover:</strong> <code>.submit-btn:hover</code></li>
+                <li><strong>Req 8: Doc icon before:</strong> <code>.assignment-title::before</code> (Unicode <code>\1F4C4</code>)</li>
+                <li><strong>Req 9: Submission status badge:</strong> <code>.status-completed::after</code></li>
+                <li><strong>Req 10: First letter larger:</strong> <code>.assignment-desc::first-letter</code></li>
+            </ul>
+        </aside>
+    </main>
+</body>
+</html>

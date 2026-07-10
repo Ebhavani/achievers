@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise ID Card Templates Showcase</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/id-cards.css">
+</head>
+<body>
+
+    <!-- CSS Toggle Checkboxes (Hidden) -->
+    <input type="radio" id="mode-side-by-side" name="gallery-view-mode" checked class="hidden-radio">
+    <input type="radio" id="mode-flip-3d" name="gallery-view-mode" class="hidden-radio">
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <a href="index.html" class="back-link" title="Back to Dashboard">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <span class="logo-icon"><i class="fa-solid fa-id-card-clip"></i></span>
+                <span class="logo-text">AchieversIT <span class="accent-text">Design Studio</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-item">Dashboard</a>
+                <a href="#classic-horizontal" class="nav-item">Horizontal</a>
+                <a href="#modern-chevron" class="nav-item">Chevron</a>
+                <a href="#premium-curved" class="nav-item">Curved</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="page-wrapper">
+        
+        <!-- Intro Section -->
+        <section class="intro-section">
+            <div class="intro-content">
+                <span class="badge">CSS Assignment - Custom Cards</span>
+                <h1 class="intro-title">Corporate Employee ID Cards</h1>
+                <p class="intro-desc">
+                    Recreation of pixel-perfect corporate identification badges matching the reference layout designs. 
+                    Built exclusively with HTML5 and CSS3 (utilizing Flexbox, Grid, Custom Variables, and 3D Transforms).
+                </p>
+                
+                <!-- View Mode Controls (CSS-Only Toggle Hack) -->
+                <div class="view-toggle-wrapper">
+                    <span class="toggle-label">View Mode:</span>
+                    <div class="toggle-buttons">
+                        <label class="toggle-btn-label" for="mode-side-by-side">
+                            <i class="fa-solid fa-grip-vertical"></i> Side-by-Side
+                        </label>
+                        <label class="toggle-btn-label" for="mode-flip-3d">
+                            <i class="fa-solid fa-rotate"></i> Interactive 3D Flip
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showcase Gallery -->
+        <section class="gallery-container">
+            
+            <!-- Card Template 1: Classic Horizontal Card -->
+            <div class="showcase-item" id="classic-horizontal">
+                <div class="item-meta">
+                    <span class="item-number">Template 01</span>
+                    <h2 class="item-title">Classic Corporate Horizontal Card</h2>
+                    <p class="item-description">
+                        A traditional horizontal badge layout featuring a bold identification header bar, clean side-by-side profile split, and prominent branding. Deals with precise text alignment and rigid grids.
+                    </p>
+                </div>
+                
+                <!-- ID Card Wrapper -->
+                <div class="card-display-wrapper card-layout-horizontal">
+                    
+                    <!-- Front Side Card Container -->
+                    <div class="id-card horizontal-card-front card-face face-front">
+                        <!-- Header Bar -->
+                        <div class="horizontal-card-header">
+                            <span>IDENTIFICATION CARD</span>
+                        </div>
+                        
+                        <!-- Content Body -->
+                        <div class="horizontal-card-body">
+                            <!-- Profile Photo Left -->
+                            <div class="horizontal-profile-area">
+                                <div class="horizontal-avatar-frame">
+                                    <img src="images/employee1.png" alt="Employee Photo" class="employee-photo">
+                                </div>
+                            </div>
+                            
+                            <!-- Information Details Right -->
+                            <div class="horizontal-details-area">
+                                <table class="details-table">
+                                    <tr>
+                                        <td class="lbl">Name:</td>
+                                        <td class="val val-bold">JOHN DOE</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lbl">Title:</td>
+                                        <td class="val val-title">Director</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lbl">ID No:</td>
+                                        <td class="val">123456</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lbl">Issued:</td>
+                                        <td class="val">01/01/2020</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lbl">Expires:</td>
+                                        <td class="val">31/12/2020</td>
+                                    </tr>
+                                </table>
+                                
+                                <div class="horizontal-company-title">COMPANY</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Back Side Card Container -->
+                    <div class="id-card horizontal-card-back card-face face-back">
+                        <!-- Header Bar -->
+                        <div class="horizontal-card-header bg-dark-navy">
+                            <span>TERMS AND CONDITIONS</span>
+                        </div>
+                        
+                        <!-- Content Body -->
+                        <div class="horizontal-card-body-back">
+                            <div class="back-horizontal-grid">
+                                <!-- Terms List Left -->
+                                <div class="back-terms-col">
+                                    <ul class="terms-list-small">
+                                        <li>This card is property of AchieversIT and must be returned upon termination.</li>
+                                        <li>Loss should be reported immediately to Human Resources department.</li>
+                                        <li>Do not expose card to extreme heat or magnetic fields.</li>
+                                    </ul>
+                                    <div class="dept-blood-tag">
+                                        <span>DEPT: Executive Suite</span>
+                                        <span>BLOOD: O+</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Visual Codes Right -->
+                                <div class="back-media-col">
+                                    <div class="qr-code-box">
+                                        <!-- Inline SVG QR Code -->
+                                        <svg class="qrcode-svg" viewBox="0 0 100 100">
+                                            <rect x="5" y="5" width="25" height="25" rx="2" fill="none" stroke="currentColor" stroke-width="4"/>
+                                            <rect x="10" y="10" width="15" height="15" fill="currentColor"/>
+                                            <rect x="70" y="5" width="25" height="25" rx="2" fill="none" stroke="currentColor" stroke-width="4"/>
+                                            <rect x="75" y="10" width="15" height="15" fill="currentColor"/>
+                                            <rect x="5" y="70" width="25" height="25" rx="2" fill="none" stroke="currentColor" stroke-width="4"/>
+                                            <rect x="10" y="75" width="15" height="15" fill="currentColor"/>
+                                            <rect x="70" y="70" width="10" height="10" fill="currentColor"/>
+                                            <rect x="35" y="5" width="10" height="5" fill="currentColor"/>
+                                            <rect x="50" y="10" width="5" height="15" fill="currentColor"/>
+                                            <rect x="60" y="5" width="5" height="5" fill="currentColor"/>
+                                            <rect x="35" y="15" width="5" height="10" fill="currentColor"/>
+                                            <rect x="45" y="20" width="10" height="5" fill="currentColor"/>
+                                            <rect x="60" y="25" width="5" height="10" fill="currentColor"/>
+                                            <rect x="5" y="35" width="15" height="5" fill="currentColor"/>
+                                            <rect x="25" y="35" width="5" height="10" fill="currentColor"/>
+                                            <rect x="35" y="35" width="10" height="5" fill="currentColor"/>
+                                            <rect x="50" y="35" width="15" height="5" fill="currentColor"/>
+                                            <rect x="70" y="35" width="5" height="15" fill="currentColor"/>
+                                            <rect x="80" y="35" width="15" height="5" fill="currentColor"/>
+                                            <rect x="10" y="45" width="5" height="10" fill="currentColor"/>
+                                            <rect x="20" y="50" width="10" height="5" fill="currentColor"/>
+                                            <rect x="35" y="45" width="5" height="15" fill="currentColor"/>
+                                            <rect x="45" y="55" width="10" height="5" fill="currentColor"/>
+                                            <rect x="60" y="50" width="5" height="5" fill="currentColor"/>
+                                            <rect x="80" y="45" width="10" height="10" fill="currentColor"/>
+                                            <rect x="15" y="60" width="10" height="5" fill="currentColor"/>
+                                            <rect x="30" y="60" width="5" height="5" fill="currentColor"/>
+                                            <rect x="40" y="65" width="15" height="5" fill="currentColor"/>
+                                            <rect x="60" y="60" width="10" height="5" fill="currentColor"/>
+                                            <rect x="85" y="60" width="5" height="10" fill="currentColor"/>
+                                            <rect x="35" y="75" width="5" height="15" fill="currentColor"/>
+                                            <rect x="45" y="75" width="15" height="5" fill="currentColor"/>
+                                            <rect x="60" y="80" width="5" height="10" fill="currentColor"/>
+                                            <rect x="85" y="80" width="10" height="5" fill="currentColor"/>
+                                            <rect x="35" y="90" width="15" height="5" fill="currentColor"/>
+                                            <rect x="55" y="90" width="10" height="5" fill="currentColor"/>
+                                            <rect x="75" y="85" width="5" height="10" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <div class="back-contact-info">
+                                        <span>+1 (555) 019-2834</span>
+                                        <span>doe@company.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Bottom Bar with Barcode and Signature -->
+                            <div class="back-horizontal-footer">
+                                <div class="barcode-wrapper">
+                                    <!-- Inline SVG Barcode -->
+                                    <svg class="barcode-svg" viewBox="0 0 200 40">
+                                        <rect x="0" y="0" width="4" height="40" fill="currentColor"/>
+                                        <rect x="8" y="0" width="2" height="40" fill="currentColor"/>
+                                        <rect x="14" y="0" width="6" height="40" fill="currentColor"/>
+                                        <rect x="24" y="0" width="2" height="40" fill="currentColor"/>
+                                        <rect x="30" y="0" width="4" height="40" fill="currentColor"/>
+                                        <rect x="38" y="0" width="8" height="40" fill="currentColor"/>
+                                        <rect x="50" y="0" width="2" height="40" fill="currentColor"/>
+                                        <rect x="56" y="0" width="4" height="40" fill="currentColor"/>
+                                        <rect x="64" y="0" width="6" height="40" fill="currentColor"/>
+                                        <rect x="74" y="0" width="2" height="40" fill="currentColor"/>
+                                        <rect x="80" y="0" width="8" height="40" fill="currentColor"/>
+                                        <rect x="92" y="0" width="4" height="40" fill="currentColor"/>
+                                        <rect x="100" y="0" width="2" height="40" fill="currentColor"/>
+                                        <rect x="106" y="0" width="6" height="40" fill="currentColor"/>
+                                        <rect x="116" y="0" width="2" height="40" fill="currentColor"/>
+                                        <rect x="122" y="0" width="4" height="40" fill="currentColor"/>
+                                        <rect x="130" y="0" width="8" height="40" fill="currentColor"/>
+                                        <rect x="142" y="0" width="2" height="40" fill="currentColor"/>
+                                        <rect x="148" y="0" width="4" height="40" fill="currentColor"/>
+                                        <rect x="156" y="0" width="6" height="40" fill="currentColor"/>
+                                        <rect x="166" y="0" width="2" height="40" fill="currentColor"/>
+                                        <rect x="172" y="0" width="8" height="40" fill="currentColor"/>
+                                        <rect x="184" y="0" width="4" height="40" fill="currentColor"/>
+                                        <rect x="192" y="0" width="6" height="40" fill="currentColor"/>
+                                    </svg>
+                                    <span class="barcode-num">123456-DOE</span>
+                                </div>
+                                <div class="signature-box">
+                                    <!-- Inline SVG Signature -->
+                                    <svg class="signature-svg" viewBox="0 0 150 50">
+                                        <path d="M 10 32 C 30 22, 50 15, 65 27 C 80 39, 90 12, 110 27 C 120 33, 130 8, 140 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                    </svg>
+                                    <span class="signature-lbl">Authorized Signature</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Template 2: Modern Chevron Vertical Card -->
+            <div class="showcase-item" id="modern-chevron">
+                <div class="item-meta">
+                    <span class="item-number">Template 02</span>
+                    <h2 class="item-title">Modern Chevron Vertical Card</h2>
+                    <p class="item-description">
+                        A dynamic vertical layout utilizing geometric chevron stripes at the top and bottom, featuring an overlapping rounded portrait frame, and crisp details on the reverse side.
+                    </p>
+                </div>
+                
+                <!-- ID Card Wrapper -->
+                <div class="card-display-wrapper card-layout-vertical">
+                    
+                    <!-- Front Side Card Container -->
+                    <div class="id-card chevron-card-front card-face face-front">
+                        <!-- Chevron Background Top -->
+                        <div class="chevron-header-bg">
+                            <!-- Geometric SVG overlay for perfect chevron shapes -->
+                            <svg class="chevron-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <polygon points="0,0 100,0 100,70 50,90 0,70" fill="var(--corp-blue-dark)"/>
+                                <polygon points="0,0 100,0 100,55 50,75 0,55" fill="var(--corp-blue)"/>
+                                <polygon points="0,0 100,0 100,40 50,60 0,40" fill="var(--corp-cyan)"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Profile Photo Center Overlay -->
+                        <div class="chevron-profile-container">
+                            <div class="chevron-avatar-frame">
+                                <img src="images/employee2.png" alt="Employee Photo" class="employee-photo">
+                            </div>
+                        </div>
+                        
+                        <!-- Content Body -->
+                        <div class="chevron-card-body">
+                            <div class="employee-name-title-sec">
+                                <h3 class="employee-name">JOHN SMITH</h3>
+                                <p class="employee-designation">creative manager</p>
+                            </div>
+                            
+                            <!-- Department Tag -->
+                            <div class="department-badge">Creative Department</div>
+                        </div>
+                        
+                        <!-- Bottom Section & Logo -->
+                        <div class="chevron-footer-sec">
+                            <!-- Chevron Background Bottom -->
+                            <div class="chevron-footer-bg">
+                                <svg class="chevron-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <polygon points="0,30 50,10 100,30 100,100 0,100" fill="var(--corp-blue-dark)"/>
+                                    <polygon points="0,45 50,25 100,45 100,100 0,100" fill="var(--corp-blue)"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="chevron-logo-box">
+                                <div class="logo-flex">
+                                    <span class="logo-icon-small">
+                                        <!-- Wave Logo SVG -->
+                                        <svg viewBox="0 0 100 100" width="24" height="24" class="logo-svg-white">
+                                            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="8"/>
+                                            <path d="M 25 55 C 35 40, 45 40, 55 55 C 65 70, 75 70, 85 55" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                                            <circle cx="50" cy="30" r="10" fill="currentColor"/>
+                                        </svg>
+                                    </span>
+                                    <div class="logo-text-group-white">
+                                        <span class="logo-brand">COMPANY</span>
+                                        <span class="logo-tagline">TAGLINE HERE</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Back Side Card Container -->
+                    <div class="id-card chevron-card-back card-face face-back">
+                        <!-- Chevron Background Top -->
+                        <div class="chevron-header-bg">
+                            <svg class="chevron-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <polygon points="0,0 100,0 100,70 50,90 0,70" fill="var(--corp-blue-dark)"/>
+                                <polygon points="0,0 100,0 100,55 50,75 0,55" fill="var(--corp-blue)"/>
+                                <polygon points="0,0 100,0 100,40 50,60 0,40" fill="var(--corp-cyan)"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Content Body -->
+                        <div class="chevron-card-body-back">
+                            <!-- Logo in Upper Middle -->
+                            <div class="chevron-back-logo-sec">
+                                <div class="logo-flex">
+                                    <span class="logo-icon-small primary-blue">
+                                        <svg viewBox="0 0 100 100" width="24" height="24">
+                                            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="8"/>
+                                            <path d="M 25 55 C 35 40, 45 40, 55 55 C 65 70, 75 70, 85 55" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                                            <circle cx="50" cy="30" r="10" fill="currentColor"/>
+                                        </svg>
+                                    </span>
+                                    <div class="logo-text-group">
+                                        <span class="logo-brand">COMPANY</span>
+                                        <span class="logo-tagline text-muted">TAGLINE HERE</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Details Listing -->
+                            <div class="chevron-back-details">
+                                <div class="detail-row">
+                                    <span class="lbl">ID NO</span>
+                                    <span class="col-separator">:</span>
+                                    <span class="val">098276656</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="lbl">Blood</span>
+                                    <span class="col-separator">:</span>
+                                    <span class="val">A-</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="lbl">Phone</span>
+                                    <span class="col-separator">:</span>
+                                    <span class="val">000-123-456-786</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="lbl">E-mail</span>
+                                    <span class="col-separator">:</span>
+                                    <span class="val">urmail@gmail.com</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Barcode Placeholder -->
+                            <div class="chevron-back-barcode-sec">
+                                <svg class="barcode-svg" viewBox="0 0 200 40">
+                                    <rect x="0" y="0" width="4" height="40" fill="currentColor"/>
+                                    <rect x="8" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="14" y="0" width="6" height="40" fill="currentColor"/>
+                                    <rect x="24" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="30" y="0" width="4" height="40" fill="currentColor"/>
+                                    <rect x="38" y="0" width="8" height="40" fill="currentColor"/>
+                                    <rect x="50" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="56" y="0" width="4" height="40" fill="currentColor"/>
+                                    <rect x="64" y="0" width="6" height="40" fill="currentColor"/>
+                                    <rect x="74" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="80" y="0" width="8" height="40" fill="currentColor"/>
+                                    <rect x="92" y="0" width="4" height="40" fill="currentColor"/>
+                                    <rect x="100" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="106" y="0" width="6" height="40" fill="currentColor"/>
+                                    <rect x="116" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="122" y="0" width="4" height="40" fill="currentColor"/>
+                                    <rect x="130" y="0" width="8" height="40" fill="currentColor"/>
+                                    <rect x="142" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="148" y="0" width="4" height="40" fill="currentColor"/>
+                                    <rect x="156" y="0" width="6" height="40" fill="currentColor"/>
+                                    <rect x="166" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="172" y="0" width="8" height="40" fill="currentColor"/>
+                                    <rect x="184" y="0" width="4" height="40" fill="currentColor"/>
+                                    <rect x="192" y="0" width="6" height="40" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            
+                            <!-- Dynamic QR Code & Signature Overlay in bottom chevron -->
+                            <div class="chevron-back-extra-footer">
+                                <div class="terms-summary">
+                                    <span>Subject to company guidelines.</span>
+                                </div>
+                                <div class="qr-and-sig-row">
+                                    <div class="mini-qr">
+                                        <svg viewBox="0 0 100 100" class="qrcode-svg-muted">
+                                            <rect x="5" y="5" width="25" height="25" rx="2" fill="none" stroke="currentColor" stroke-width="4"/>
+                                            <rect x="10" y="10" width="15" height="15" fill="currentColor"/>
+                                            <rect x="70" y="5" width="25" height="25" rx="2" fill="none" stroke="currentColor" stroke-width="4"/>
+                                            <rect x="75" y="10" width="15" height="15" fill="currentColor"/>
+                                            <rect x="5" y="70" width="25" height="25" rx="2" fill="none" stroke="currentColor" stroke-width="4"/>
+                                            <rect x="10" y="75" width="15" height="15" fill="currentColor"/>
+                                            <rect x="70" y="70" width="10" height="10" fill="currentColor"/>
+                                            <rect x="35" y="5" width="10" height="5" fill="currentColor"/>
+                                            <rect x="50" y="10" width="5" height="15" fill="currentColor"/>
+                                            <rect x="35" y="15" width="5" height="10" fill="currentColor"/>
+                                            <rect x="45" y="20" width="10" height="5" fill="currentColor"/>
+                                            <rect x="60" y="25" width="5" height="10" fill="currentColor"/>
+                                            <rect x="5" y="35" width="15" height="5" fill="currentColor"/>
+                                            <rect x="25" y="35" width="5" height="10" fill="currentColor"/>
+                                            <rect x="35" y="35" width="10" height="5" fill="currentColor"/>
+                                            <rect x="50" y="35" width="15" height="5" fill="currentColor"/>
+                                            <rect x="70" y="35" width="5" height="15" fill="currentColor"/>
+                                            <rect x="80" y="35" width="15" height="5" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <div class="mini-sig">
+                                        <svg viewBox="0 0 150 50" class="signature-svg-muted">
+                                            <path d="M 10 32 C 30 22, 50 15, 65 27 C 80 39, 90 12, 110 27 C 120 33, 130 8, 140 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Bottom Chevron Decorator -->
+                        <div class="chevron-footer-sec">
+                            <div class="chevron-footer-bg">
+                                <svg class="chevron-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <polygon points="0,30 50,10 100,30 100,100 0,100" fill="var(--corp-blue-dark)"/>
+                                    <polygon points="0,45 50,25 100,45 100,100 0,100" fill="var(--corp-blue)"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Template 3: Premium Curved Vertical Card -->
+            <div class="showcase-item" id="premium-curved">
+                <div class="item-meta">
+                    <span class="item-number">Template 03</span>
+                    <h2 class="item-title">Premium Curved Vertical Card</h2>
+                    <p class="item-description">
+                        An elegant corporate design combining modern curves and a contrasting navy and white backdrop. Features complex overlapping elements, structured profile tables, and terms and conditions with custom bullet icons on the back.
+                    </p>
+                </div>
+                
+                <!-- ID Card Wrapper -->
+                <div class="card-display-wrapper card-layout-vertical">
+                    
+                    <!-- Front Side Card Container -->
+                    <div class="id-card curved-card-front card-face face-front">
+                        <!-- Curved Header Background -->
+                        <div class="curved-header-bg">
+                            <div class="curved-blue-block">
+                                <div class="header-logo-area">
+                                    <div class="logo-flex">
+                                        <span class="logo-icon-small text-white">
+                                            <!-- Hexagon SVG -->
+                                            <svg viewBox="0 0 100 100" width="24" height="24">
+                                                <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" fill="none" stroke="currentColor" stroke-width="8"/>
+                                                <polygon points="50,20 75,35 75,65 50,80 25,65 25,35" fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                        <div class="logo-text-group-white">
+                                            <span class="logo-brand">COMPANY NAME</span>
+                                            <span class="logo-tagline">Your Tagline Here</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- SVG Curve overlay -->
+                            <svg class="curve-divider-svg" viewBox="0 0 100 30" preserveAspectRatio="none">
+                                <path d="M 0 0 L 100 0 L 100 15 Q 50 30 0 15 Z" fill="var(--corp-blue-dark)"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Overlapping Round Photo -->
+                        <div class="curved-profile-container">
+                            <div class="curved-avatar-frame">
+                                <img src="images/employee3.png" alt="Employee Photo" class="employee-photo">
+                            </div>
+                        </div>
+                        
+                        <!-- Content Body -->
+                        <div class="curved-card-body">
+                            <!-- Name Section -->
+                            <div class="curved-name-sec">
+                                <h3 class="employee-name-blue">Alexander Wright</h3>
+                                <p class="employee-designation-dark">Lead Architect</p>
+                                <span class="dept-tag">Enterprise Solutions</span>
+                            </div>
+                            
+                            <!-- Info Table Details -->
+                            <div class="curved-info-table">
+                                <div class="table-row">
+                                    <div class="lbl">ID NO</div>
+                                    <div class="sep">:</div>
+                                    <div class="val">00 1234 56789</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="lbl">D.O.B</div>
+                                    <div class="sep">:</div>
+                                    <div class="val">07-09-2001</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="lbl">B.GROUP</div>
+                                    <div class="sep">:</div>
+                                    <div class="val">A+</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="lbl">PHONE</div>
+                                    <div class="sep">:</div>
+                                    <div class="val">+00 1234 5678</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="lbl">E-MAIL</div>
+                                    <div class="sep">:</div>
+                                    <div class="val font-sm">wright@company.com</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Bottom Curve Decorative Accents -->
+                        <div class="curved-footer-bg">
+                            <svg class="curve-footer-svg" viewBox="0 0 100 20" preserveAspectRatio="none">
+                                <path d="M 0 20 Q 50 0 100 20 Z" fill="var(--corp-blue-dark)"/>
+                                <path d="M 0 20 Q 50 10 100 20 Z" fill="var(--corp-cyan)"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Back Side Card Container -->
+                    <div class="id-card curved-card-back card-face face-back bg-dark-navy">
+                        <!-- Curved White Header Background -->
+                        <div class="curved-header-bg bg-white">
+                            <div class="curved-white-block">
+                                <div class="header-logo-area">
+                                    <div class="logo-flex">
+                                        <span class="logo-icon-small primary-blue">
+                                            <svg viewBox="0 0 100 100" width="24" height="24">
+                                                <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" fill="none" stroke="currentColor" stroke-width="8"/>
+                                                <polygon points="50,20 75,35 75,65 50,80 25,65 25,35" fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                        <div class="logo-text-group">
+                                            <span class="logo-brand text-blue">COMPANY NAME</span>
+                                            <span class="logo-tagline text-muted">Your Tagline Here</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Curve Divider -->
+                            <svg class="curve-divider-svg" viewBox="0 0 100 30" preserveAspectRatio="none">
+                                <path d="M 0 0 L 100 0 L 100 15 Q 50 30 0 15 Z" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Content Body (Reverse Side in Navy Blue) -->
+                        <div class="curved-card-body-back text-white">
+                            
+                            <!-- Barcode directly under the curved header -->
+                            <div class="curved-back-barcode-box bg-white-rounded">
+                                <svg class="barcode-svg" viewBox="0 0 200 40">
+                                    <rect x="0" y="0" width="4" height="40" fill="currentColor"/>
+                                    <rect x="8" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="14" y="0" width="6" height="40" fill="currentColor"/>
+                                    <rect x="24" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="30" y="0" width="4" height="40" fill="currentColor"/>
+                                    <rect x="38" y="0" width="8" height="40" fill="currentColor"/>
+                                    <rect x="50" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="56" y="0" width="4" height="40" fill="currentColor"/>
+                                    <rect x="64" y="0" width="6" height="40" fill="currentColor"/>
+                                    <rect x="74" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="80" y="0" width="8" height="40" fill="currentColor"/>
+                                    <rect x="92" y="0" width="4" height="40" fill="currentColor"/>
+                                    <rect x="100" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="106" y="0" width="6" height="40" fill="currentColor"/>
+                                    <rect x="116" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="122" y="0" width="4" height="40" fill="currentColor"/>
+                                    <rect x="130" y="0" width="8" height="40" fill="currentColor"/>
+                                    <rect x="142" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="148" y="0" width="4" height="40" fill="currentColor"/>
+                                    <rect x="156" y="0" width="6" height="40" fill="currentColor"/>
+                                    <rect x="166" y="0" width="2" height="40" fill="currentColor"/>
+                                    <rect x="172" y="0" width="8" height="40" fill="currentColor"/>
+                                    <rect x="184" y="0" width="4" height="40" fill="currentColor"/>
+                                    <rect x="192" y="0" width="6" height="40" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            
+                            <!-- Terms & Conditions Section -->
+                            <div class="curved-back-terms">
+                                <h4 class="terms-title">Terms & Conditions:</h4>
+                                <ul class="terms-bullet-list">
+                                    <li>
+                                        <span class="list-bullet-icon"><i class="fa-regular fa-circle-dot"></i></span>
+                                        <span class="list-text">It is a long established fact that a reader will be distracted by</span>
+                                    </li>
+                                    <li>
+                                        <span class="list-bullet-icon"><i class="fa-regular fa-circle-dot"></i></span>
+                                        <span class="list-text">It is a long established fact that a reader will be distracted by</span>
+                                    </li>
+                                    <li>
+                                        <span class="list-bullet-icon"><i class="fa-regular fa-circle-dot"></i></span>
+                                        <span class="list-text">It is a long established fact that a reader will be distracted by</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Bottom Signature Area -->
+                            <div class="curved-back-footer">
+                                <div class="qr-code-holder-white">
+                                    <svg viewBox="0 0 100 100" class="qrcode-svg-white">
+                                        <rect x="5" y="5" width="25" height="25" rx="2" fill="none" stroke="currentColor" stroke-width="4"/>
+                                        <rect x="10" y="10" width="15" height="15" fill="currentColor"/>
+                                        <rect x="70" y="5" width="25" height="25" rx="2" fill="none" stroke="currentColor" stroke-width="4"/>
+                                        <rect x="75" y="10" width="15" height="15" fill="currentColor"/>
+                                        <rect x="5" y="70" width="25" height="25" rx="2" fill="none" stroke="currentColor" stroke-width="4"/>
+                                        <rect x="10" y="75" width="15" height="15" fill="currentColor"/>
+                                        <rect x="70" y="70" width="10" height="10" fill="currentColor"/>
+                                        <rect x="35" y="5" width="10" height="5" fill="currentColor"/>
+                                        <rect x="50" y="10" width="5" height="15" fill="currentColor"/>
+                                        <rect x="35" y="15" width="5" height="10" fill="currentColor"/>
+                                        <rect x="45" y="20" width="10" height="5" fill="currentColor"/>
+                                        <rect x="60" y="25" width="5" height="10" fill="currentColor"/>
+                                        <rect x="5" y="35" width="15" height="5" fill="currentColor"/>
+                                        <rect x="25" y="35" width="5" height="10" fill="currentColor"/>
+                                        <rect x="35" y="35" width="10" height="5" fill="currentColor"/>
+                                        <rect x="50" y="35" width="15" height="5" fill="currentColor"/>
+                                        <rect x="70" y="35" width="5" height="15" fill="currentColor"/>
+                                        <rect x="80" y="35" width="15" height="5" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="signature-holder">
+                                    <div class="cursive-signature">Signature</div>
+                                    <div class="sig-line">Your Signature</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 AchieversIT Design Studio. All corporate layouts designed using pure semantic HTML5 & CSS3.</p>
+            <div class="badge-list">
+                <span class="footer-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span class="footer-badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="footer-badge"><i class="fa-solid fa-mobile-screen"></i> Responsive</span>
+                <span class="footer-badge"><i class="fa-solid fa-cube"></i> 3D Transforms</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

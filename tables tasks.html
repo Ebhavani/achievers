@@ -1,0 +1,277 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables_Assigment_Solution</title>
+    <style>
+        tr,th,td{
+            border: 2px solid black;
+            padding: 10px;
+        }
+        table{
+            border: 2px solid black;
+        }
+        .table-1{
+            width: 800px;
+        }
+        .table-2{
+            width: 600px;
+            color: white;
+            background-color: rgb(31, 132, 6);
+        }
+        .table-3{
+            height: 300px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .table-4{
+            width: 600px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        .table-4-sec-row,.table-4-thr-row{
+            height: 100px;
+        }
+        .table-5{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <caption><strong>Table-1: </strong></caption>
+    <table class="table-1">
+        <tr>
+            <th colspan="6">Time Table</th>
+        </tr>
+        <tr>
+            <th rowspan="6">Hours</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+        </tr>
+        <tr>
+            <td>Computer</td>
+            <td>Maths</td>
+            <td>Computer</td>
+            <td>Maths</td>
+            <td>Arts</td>
+        </tr>
+        <tr>
+            <td>Computer</td>
+            <td>Maths</td>
+            <td>Computer</td>
+            <td>Maths</td>
+            <td>Arts</td>
+        </tr>
+        <tr>
+            <th colspan="5">LUNCH</th>
+        </tr>
+        <tr>
+            <td>Computer</td>
+            <td>Maths</td>
+            <td>Computer</td>
+            <td>Maths</td>
+            <td rowspan="2">Project</td>
+        </tr>
+        <tr>
+            <td>Computer</td>
+            <td>Maths</td>
+            <td>Computer</td>
+            <td>Maths</td>
+        </tr>
+    </table>
+    <br><br><br>
+    <caption><strong>Table-2:</strong></caption>
+    <caption><strong>TABLE USING COLSPAN,ROWSPAN</strong></caption>
+    <table class="table-2">
+        <tr>
+            <th rowspan="9">A</th>
+            <th rowspan="8">B</th>
+            <th rowspan="7">C</th>
+            <th rowspan="6">D</th>
+            <th rowspan="5">E</th>
+            <th rowspan="4">F</th>
+            <th colspan="2">AH</th>
+            <th rowspan="4">H</th>
+            <th rowspan="5">I</th>
+            <th rowspan="6">J</th>
+            <th rowspan="7">K</th>
+            <th rowspan="8">L</th>
+            <th rowspan="10">M</th>
+        </tr>
+        <tr>
+            <th>H</th>
+        </tr>
+        <tr>
+            <th>GH</th>
+        </tr>
+        <tr>
+            <th>N</th>
+        </tr>
+        <tr>
+            <th colspan="4">O</th>
+        </tr>
+        <tr>
+            <th colspan="6">P</th>
+        </tr>
+        <tr>
+            <th colspan="8">Q</th>
+        </tr>
+        <tr>
+            <th colspan="2">R</th>
+            <th>S</th>
+            <th>T</th>
+            <th colspan="2">U</th>
+            <th>V</th>
+            <th>W</th>
+            <th colspan="2">X</th>
+        </tr>
+        <tr>
+            <th colspan="12">Y</th>
+        </tr>
+        <tr>
+            <th colspan="2">Z</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th colspan="2">5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+        </tr>
+    </table>
+    <br><br><br>
+    <caption><strong>Table-3:</strong></caption>
+    <caption><strong>Web Infomax IT Solutions</strong></caption>
+    <table class="table-3">
+        <tr class="table-3-first-col">
+            <th rowspan="2">Sr.NO</th>
+            <th rowspan="2" style="width: 90px;">Details of the Services Provided</th>
+            <th rowspan="2">Qty</th>
+            <th colspan="2" style="width: 50px;">Service Period</th>
+            <th colspan="4">Service Performance Details</th>
+        </tr>
+        <tr>
+            <th>From</th>
+            <th>To</th>
+            <th class="table-3-six-col">S.No</th>
+            <th style="width: 50px;">Service ID No:</th>
+            <th style="width: 50px;">Gap in Service(in days)</th>
+            <th style="width: 50px;">Overall Performance Remarks(Satisfactory/unsatisfactory)</th>
+        </tr>
+        <tr>
+            <td rowspan="3">1</td>
+            <td rowspan="3"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">2</td>
+            <td rowspan="2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <br><br><br>
+    <caption><strong>Table-4:</strong></caption>
+    <caption><strong>Table with column and row spanned:</strong></caption>
+    <table class="table-4">
+        <tr>
+            <th style="background-color: rgb(240, 185, 220);">Logo</th>
+            <th colspan="3" style="background-color: beige;">Top Menu</th>
+        </tr>
+        <tr class="table-4-sec-row">
+            <th rowspan="2" style="background-color: beige;">Side Menu</th>
+            <th style="background-color: azure;">World News</th>
+            <th style="background-color: azure;">Financial</th>
+            <th rowspan="2" style="background-color: rgb(240, 185, 220);">List of Ads</th>
+        </tr>
+        <tr class="table-4-thr-row">
+            <th style="background-color: azure;">Technology</th>
+            <th style="background-color: azure;">Sports</th>
+        </tr>
+        <tr>
+            <th colspan="4" style="background-color: rgb(224, 207, 182);">Footer</th>
+        </tr>
+    </table>
+    <br><br><br>
+    <caption><strong>Table-5:</strong></caption>
+    <table class="table-5">
+        <tr>
+            <th style="background-color: yellow;">1</th>
+            <th colspan="2" style="background-color: yellow;">2</th>
+            <th colspan="2" style="background-color: yellow;">3</th>
+        </tr>
+        <tr>
+            <th rowspan="2" colspan="2" style="background-color: rgb(160, 247, 247);">4</th>
+            <th colspan="3" style="background-color: rgb(160, 247, 247);">5</th>
+        </tr>
+        <tr>
+            <th colspan="2" style="background-color: rgb(84, 239, 161);">6</th>
+            <th rowspan="3" style="background-color: rgb(52, 234, 143);">7</th>
+        </tr>
+        <tr>
+            <th rowspan="5" style="background-color: beige;">8</th>
+            <th style="background-color: beige;">9</th>
+            <th style="background-color: beige;">10</th>
+            <th rowspan="2" style="background-color: beige;">11</th>
+        </tr>
+        <tr>
+            <th colspan="2" style="background-color: rgb(229, 143, 143);">12</th>
+        </tr>
+        <tr>
+            <th rowspan="3" style="background-color: rgb(246, 203, 230);">13</th>
+            <th colspan="3" style="background-color: rgb(246, 203, 230);">14</th>
+        </tr>
+        <tr>
+            <th colspan="2" style="background-color: rgb(214, 100, 100);">15</th>
+            <th style="background-color: rgb(214, 100, 100);">16</th>
+        </tr>
+        <tr>
+            <th colspan="3" style="background-color: rgb(232, 213, 37);">17</th>
+        </tr>
+    </table>
+</body>
+</html>

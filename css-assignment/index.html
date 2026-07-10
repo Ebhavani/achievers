@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Assignment Showcase</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="main-heading">CSS Selectors Showcase</h1>
+            <p class="subtitle">A masterclass in modern CSS layouts and selectors without using JS, inline styling, or attribute selectors.</p>
+            <div class="guidelines-card">
+                <h2>Assignment Rules & Constraints</h2>
+                <ul>
+                    <li>Use HTML and CSS only</li>
+                    <li>Do NOT use JavaScript</li>
+                    <li>Do NOT use Inline CSS</li>
+                    <li>Do NOT use Attribute Selectors</li>
+                    <li>Semantic and Clean HTML Structure</li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="grid">
+            <!-- Scenario 1 -->
+            <div class="card">
+                <div>
+                    <span class="card-num">Scenario 1</span>
+                    <h2 class="card-title">Student Dashboard</h2>
+                    <p class="card-desc">A dashboard for AchieversIT tracking students. Demonstrates pseudo-classes like first/alternate styling, before/after pseudo-elements for icon generation, and first-letter sizing.</p>
+                    <div class="selectors-list">
+                        <p>Key Selectors Used</p>
+                        <div class="selectors-tags">
+                            <span class="tag">#id</span>
+                            <span class="tag">.class</span>
+                            <span class="tag">:first-of-type</span>
+                            <span class="tag">:nth-of-type()</span>
+                            <span class="tag">::before</span>
+                            <span class="tag">::after</span>
+                            <span class="tag">::first-letter</span>
+                            <span class="tag">:hover</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="scenario1.html" class="card-btn">Explore Scenario 1</a>
+            </div>
+
+            <!-- Scenario 2 -->
+            <div class="card">
+                <div>
+                    <span class="card-num">Scenario 2</span>
+                    <h2 class="card-title">E-Commerce Product Page</h2>
+                    <p class="card-desc">An online shopping view displaying product cards. Demonstrates first-child hot deal indicators, last-child limited stock notifications, discount badges, and dynamic add-to-cart hovers.</p>
+                    <div class="selectors-list">
+                        <p>Key Selectors Used</p>
+                        <div class="selectors-tags">
+                            <span class="tag">#logo</span>
+                            <span class="tag">.product-card</span>
+                            <span class="tag">:first-child</span>
+                            <span class="tag">:last-child</span>
+                            <span class="tag">descendant combinator</span>
+                            <span class="tag">::before</span>
+                            <span class="tag">::after</span>
+                            <span class="tag">:hover</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="scenario2.html" class="card-btn">Explore Scenario 2</a>
+            </div>
+
+            <!-- Scenario 3 -->
+            <div class="card">
+                <div>
+                    <span class="card-num">Scenario 3</span>
+                    <h2 class="card-title">Employee Portal</h2>
+                    <p class="card-desc">An employee organization grid. Leverages sibling combinators to highlight employees relative to the Team Lead, alongside first/last list item decorators.</p>
+                    <div class="selectors-list">
+                        <p>Key Selectors Used</p>
+                        <div class="selectors-tags">
+                            <span class="tag">+ sibling</span>
+                            <span class="tag">~ sibling</span>
+                            <span class="tag">.team-lead</span>
+                            <span class="tag">:first-of-type</span>
+                            <span class="tag">:last-of-type</span>
+                            <span class="tag">::before</span>
+                            <span class="tag">::after</span>
+                            <span class="tag">:nth-of-type()</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="scenario3.html" class="card-btn">Explore Scenario 3</a>
+            </div>
+
+            <!-- Scenario 4 -->
+            <div class="card">
+                <div>
+                    <span class="card-num">Scenario 4</span>
+                    <h2 class="card-title">Restaurant Website</h2>
+                    <p class="card-desc">A premium culinary menu showcasing items. Utilizes custom food indicators, alternate menu item shading, drop-caps for culinary descriptions, and badges.</p>
+                    <div class="selectors-list">
+                        <p>Key Selectors Used</p>
+                        <div class="selectors-tags">
+                            <span class="tag">#restaurant-title</span>
+                            <span class="tag">.menu-item</span>
+                            <span class="tag">::first-letter</span>
+                            <span class="tag">::before</span>
+                            <span class="tag">::after</span>
+                            <span class="tag">:nth-child(even)</span>
+                            <span class="tag">:hover</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="scenario4.html" class="card-btn">Explore Scenario 4</a>
+            </div>
+
+            <!-- Scenario 5 -->
+            <div class="card">
+                <div>
+                    <span class="card-num">Scenario 5</span>
+                    <h2 class="card-title">LMS Assignment Portal</h2>
+                    <p class="card-desc">An academic assignment management view. Highlights new submissions, upcoming deadlines, completed indicators, and larger introductory letters for instructions.</p>
+                    <div class="selectors-list">
+                        <p>Key Selectors Used</p>
+                        <div class="selectors-tags">
+                            <span class="tag">#portal-title</span>
+                            <span class="tag">.assignment-card</span>
+                            <span class="tag">:first-of-type::before</span>
+                            <span class="tag">:last-of-type::after</span>
+                            <span class="tag">::first-letter</span>
+                            <span class="tag">.status-completed::after</span>
+                            <span class="tag">:hover</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="scenario5.html" class="card-btn">Explore Scenario 5</a>
+            </div>
+
+            <!-- Bonus Challenge -->
+            <div class="card bonus-card">
+                <div>
+                    <span class="card-num">Bonus Challenge</span>
+                    <h2 class="card-title">Netflix Home Page Clone</h2>
+                    <p class="card-desc">A dark-themed entertainment homepage streaming showcase. Recreates Netflix navigation, active tabs, movie tiles, custom badges for ratings/trends, play icon injections, and descriptions.</p>
+                    <div class="selectors-list">
+                        <p>Key Selectors Used</p>
+                        <div class="selectors-tags">
+                            <span class="tag">.nav-link.active</span>
+                            <span class="tag">.movie-card:hover</span>
+                            <span class="tag">:first-of-type::before</span>
+                            <span class="tag">:last-of-type::after</span>
+                            <span class="tag">::first-letter</span>
+                            <span class="tag">.trending::after</span>
+                            <span class="tag">::before (play icon)</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="netflix-clone.html" class="card-btn">Launch Netflix Clone</a>
+            </div>
+
+            <!-- Special Assignment: Employee ID Cards -->
+            <div class="card" style="border-color: rgba(15, 117, 188, 0.4);">
+                <div>
+                    <span class="card-num" style="color: #00aeef;">Special Assignment</span>
+                    <h2 class="card-title">Employee ID Cards Showcase</h2>
+                    <p class="card-desc">A premium corporate portfolio layout demonstrating three distinct Employee ID card designs (Horizontal, Chevron Vertical, and Curved Vertical) with front & back views, custom inline SVGs, and interactive 3D card flips.</p>
+                    <div class="selectors-list">
+                        <p>Key CSS Features Used</p>
+                        <div class="selectors-tags">
+                            <span class="tag">CSS Grid & Flexbox</span>
+                            <span class="tag">CSS Variables</span>
+                            <span class="tag">3D Transforms</span>
+                            <span class="tag">backface-visibility</span>
+                            <span class="tag">Inline SVGs</span>
+                            <span class="tag">:checked sibling hack</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="id-cards.html" class="card-btn">Explore ID Cards</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>CSS Selectors Assignment &copy; 2026. Handcrafted with semantic HTML & pure CSS.</p>
+        </footer>
+    </div>
+</body>
+</html>

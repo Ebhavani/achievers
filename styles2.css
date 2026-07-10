@@ -1,0 +1,765 @@
+/* --- RESET & BASIC STYLES --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eef2f5;
+  font-family: 'Outfit', sans-serif;
+  color: #333333;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- PAGE SIMULATORS (A4 / Document style) --- */
+.page-container {
+  width: 900px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  padding: 60px;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-one {
+  background-color: #ffffff;
+}
+
+.page-two {
+  background-color: #ffffff;
+}
+
+/* --- PAGE 1: HEADER & TITLE --- */
+.page-header {
+  margin-bottom: 40px;
+}
+
+.header-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.box-model-icon {
+  width: 32px;
+  height: 32px;
+  color: #1e295d;
+}
+
+.page-header h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+/* --- CARD 1: HORIZONTAL CARD (JOHN DOE) --- */
+.horizontal-card-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.horizontal-card {
+  width: 440px;
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 40px rgba(30, 41, 93, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header-bar {
+  background-color: #1e295d;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 16px 10px;
+  letter-spacing: 1.5px;
+}
+
+.horizontal-card .card-body {
+  display: flex;
+  padding: 24px;
+  gap: 20px;
+  background-color: #ffffff;
+}
+
+.photo-container {
+  flex-shrink: 0;
+}
+
+.photo-placeholder {
+  width: 105px;
+  height: 135px;
+  border-radius: 6px;
+  border: 1.5px solid #d1d5db;
+  overflow: hidden;
+  background: #f1f5f9;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.photo-placeholder svg {
+  width: 100%;
+  height: 100%;
+}
+
+.details-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.details-table td {
+  padding: 2.5px 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.92rem;
+  vertical-align: top;
+}
+
+.details-table td.label {
+  width: 72px;
+  color: #4b5563;
+  font-weight: 400;
+}
+
+.details-table td.value {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.details-table td.value.highlight {
+  font-weight: 700;
+  color: #000000;
+}
+
+.company-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #000000;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+  line-height: 1;
+}
+
+/* --- PAGE 1: BOTTOM TEMPLATE PREVIEW --- */
+.template-preview-section {
+  width: 100%;
+}
+
+.mockup-background {
+  width: 100%;
+  background-color: #2b2b2b;
+  border-radius: 12px;
+  padding: 45px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* Freepik watermarked-like diagonal stripe pattern */
+  background-image: 
+    linear-gradient(45deg, rgba(255,255,255,0.02) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255,255,255,0.02) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.02) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.02) 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}
+
+.mockup-title-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.mockup-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.mockup-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.vertical-cards-preview-container {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* --- VERTICAL PREVIEW CARDS (JOHN SMITH) --- */
+.mockup-top-capsule {
+  border: 1.2px solid rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 5px 20px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  background: transparent;
+  text-align: center;
+}
+
+.preview-vertical-card {
+  width: 210px;
+  height: 335px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-geometric-header {
+  height: 110px;
+  position: relative;
+  width: 100%;
+}
+
+.header-geometry {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Avatar positioning for V-neck overlap */
+.avatar-ring-container.thick-border {
+  position: absolute;
+  top: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.avatar-ring-container.thick-border .avatar-ring {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3.5px solid #1c1c1c; /* Thick dark outline matching John Smith template photo border */
+  padding: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.avatar-ring-container.thick-border .photo-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.preview-card-body {
+  flex-grow: 1;
+  padding: 45px 15px 12px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.holder-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #1c1c1c;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.holder-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.5rem;
+  color: #555555;
+  text-transform: lowercase;
+  letter-spacing: 0.2px;
+  margin-top: 1px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.divider-line {
+  width: 32px;
+  height: 1.5px;
+  background-color: #1c1c1c;
+  margin-bottom: 12px;
+}
+
+/* Company Logo Section Styles */
+.company-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.swirl-logo-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.company-logo-section .logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.company-logo-section .company-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 0.65rem;
+  color: #1c1c1c;
+  letter-spacing: 0.5px;
+}
+
+.company-logo-section .company-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.38rem;
+  color: #666666;
+  letter-spacing: 0.2px;
+}
+
+.card-geometric-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.footer-geometry {
+  width: 100%;
+  height: 100%;
+}
+
+/* Back Side Card Layout */
+.preview-back-body {
+  flex-grow: 1;
+  padding: 110px 18px 15px 18px; /* High top padding to push content below the V-neck header graphic */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.preview-back-body .company-logo-section {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.preview-details-list {
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.52rem;
+  line-height: 1.8;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.preview-details-list li {
+  display: flex;
+}
+
+.preview-details-list .lbl {
+  width: 48px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.preview-details-list .val {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.barcode-container.bordered {
+  width: 92%;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto 0 auto;
+  border: 1.2px solid #0d6efd; /* Blue border enclosing the barcode */
+  border-radius: 4px;
+  padding: 4px 8px;
+  background-color: #ffffff;
+}
+
+.barcode {
+  display: flex;
+  height: 22px;
+  gap: 1.5px;
+}
+
+.bar {
+  background-color: #000000;
+}
+
+.bar.thin { width: 1px; }
+.bar.medium { width: 2px; }
+.bar.thick { width: 3px; }
+.bar.extra-thick { width: 4.5px; }
+
+/* --- PAGE 2: MAIN WRAPPER & BACKGROUND ACCENTS --- */
+.page-two-mockup-wrapper {
+  width: 100%;
+}
+
+.page-two-content-bg {
+  width: 100%;
+  background-color: #e8edf2;
+  border-radius: 12px;
+  padding: 50px 30px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.02);
+}
+
+/* Abstract Diagonal Blue Background Shapes */
+.blue-corner-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(115deg, #0d6efd 38%, transparent 38.1%);
+  z-index: 1;
+}
+
+.blue-corner-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 450px;
+  height: 200px;
+  background: linear-gradient(125deg, transparent 65%, #0d6efd 65.1%);
+  z-index: 1;
+}
+
+/* Page 2 Top Features Columns */
+.mockup-features-header {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 45px;
+}
+
+.feature-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #374151;
+  text-align: center;
+}
+
+.feature-icon {
+  width: 26px;
+  height: 26px;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.feature-text h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.feature-text p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #4b5563;
+  letter-spacing: 0.2px;
+  margin-top: 1px;
+}
+
+/* --- PAGE 2: VERTICAL CARDS (NAME HERE & GRAPHIC DESIGNER) --- */
+.main-vertical-cards-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.vector-vertical-card {
+  width: 250px;
+  height: 405px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Vector Card Front Blue Top */
+.vector-vertical-card .card-top-blue {
+  background-color: #0d6efd;
+  height: 135px;
+  padding: 25px 20px;
+  display: flex;
+  justify-content: center;
+  border-bottom-left-radius: 50% 12px;
+  border-bottom-right-radius: 50% 12px;
+  position: relative;
+}
+
+.vector-vertical-card .avatar-ring-container {
+  top: 95px;
+}
+
+.vector-vertical-card .avatar-ring {
+  width: 80px;
+  height: 80px;
+  padding: 4px;
+}
+
+.vector-card-body {
+  flex-grow: 1;
+  padding: 50px 22px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.person-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #0d6efd;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.person-role {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.55rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-top: 2px;
+  margin-bottom: 22px;
+}
+
+.vector-details-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vector-details-table td {
+  padding: 3.5px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.55rem;
+  vertical-align: middle;
+}
+
+.vector-details-table td.lbl {
+  width: 58px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: 0.2px;
+}
+
+.vector-details-table td.sep {
+  width: 12px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.vector-details-table td.val {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+/* Vector Card Back Layout */
+.vector-vertical-card .card-top-white {
+  height: 140px;
+  background-color: #ffffff;
+  padding: 25px 20px 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vector-vertical-card .barcode-container {
+  width: 100%;
+  margin-top: auto;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 15px;
+}
+
+.vector-vertical-card .barcode {
+  height: 28px;
+}
+
+.vector-vertical-card .card-bottom-blue {
+  background-color: #0d6efd;
+  flex-grow: 1;
+  border-top-left-radius: 50% 12px;
+  border-top-right-radius: 50% 12px;
+  padding: 24px 22px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.terms-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 0.65rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.terms-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.terms-list li {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.bullet-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1.5px solid #ffffff;
+  display: inline-block;
+  position: relative;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.bullet-dot::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bullet-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.44rem;
+  font-weight: 500;
+  line-height: 1.35;
+  opacity: 0.95;
+}
+
+/* Signature block */
+.signature-block {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.signature-handwriting {
+  font-family: 'Monsieur La Doulaise', cursive;
+  font-size: 1.85rem;
+  color: #ffffff;
+  line-height: 0.9;
+  transform: rotate(-6deg);
+  margin-right: 15px;
+  margin-bottom: -1px;
+}
+
+.signature-line {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-top: 0.8px solid rgba(255, 255, 255, 0.4);
+  padding-top: 3px;
+  width: 80px;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+/* Page 2 Bottom Footer Capsule */
+.mockup-footer {
+  position: relative;
+  z-index: 2;
+  margin-top: 15px;
+}
+
+.image-not-included-capsule {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  padding: 7px 22px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
